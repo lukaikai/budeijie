@@ -18,6 +18,12 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"我的关注";
+    // 导航栏左边按钮
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" target:self action:@selector(btnClick)];
 }
 
+- (void)btnClick
+{
+    XKLog(@"%s",__func__);
+}
 @end

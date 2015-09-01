@@ -18,6 +18,9 @@
 		447D089D1B95BD1700414080 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08911B95BD1700414080 /* main.m */; };
 		447D089E1B95BD1700414080 /* XKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08931B95BD1700414080 /* XKTabBarController.m */; };
 		447D08A11B95CB6F00414080 /* XKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08A01B95CB6F00414080 /* XKTabBar.m */; };
+		447D08A61B95E31300414080 /* UIBarButtonItem+XK.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08A51B95E31300414080 /* UIBarButtonItem+XK.m */; };
+		447D08A91B95EC8800414080 /* XKSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08A81B95EC8800414080 /* XKSettingViewController.m */; };
+		447D08AC1B95F37A00414080 /* XKTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08AB1B95F37A00414080 /* XKTagViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,13 @@
 		447D08931B95BD1700414080 /* XKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTabBarController.m; sourceTree = "<group>"; };
 		447D089F1B95CB6F00414080 /* XKTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTabBar.h; sourceTree = "<group>"; };
 		447D08A01B95CB6F00414080 /* XKTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTabBar.m; sourceTree = "<group>"; };
+		447D08A21B95E10900414080 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		447D08A41B95E31300414080 /* UIBarButtonItem+XK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XK.h"; sourceTree = "<group>"; };
+		447D08A51B95E31300414080 /* UIBarButtonItem+XK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XK.m"; sourceTree = "<group>"; };
+		447D08A71B95EC8800414080 /* XKSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKSettingViewController.h; sourceTree = "<group>"; };
+		447D08A81B95EC8800414080 /* XKSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKSettingViewController.m; sourceTree = "<group>"; };
+		447D08AA1B95F37A00414080 /* XKTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTagViewController.h; sourceTree = "<group>"; };
+		447D08AB1B95F37A00414080 /* XKTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTagViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +162,8 @@
 			children = (
 				447D08771B95BD1700414080 /* XKEssenceViewController.h */,
 				447D08781B95BD1700414080 /* XKEssenceViewController.m */,
+				447D08AA1B95F37A00414080 /* XKTagViewController.h */,
+				447D08AB1B95F37A00414080 /* XKTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,6 +230,8 @@
 			children = (
 				447D08831B95BD1700414080 /* XKMeViewController.h */,
 				447D08841B95BD1700414080 /* XKMeViewController.m */,
+				447D08A71B95EC8800414080 /* XKSettingViewController.h */,
+				447D08A81B95EC8800414080 /* XKSettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,6 +286,7 @@
 		447D088D1B95BD1700414080 /* Other-其他 */ = {
 			isa = PBXGroup;
 			children = (
+				447D08A31B95E24A00414080 /* category */,
 				447D088E1B95BD1700414080 /* AppDelegate.h */,
 				447D088F1B95BD1700414080 /* AppDelegate.m */,
 				447D08901B95BD1700414080 /* Info.plist */,
@@ -280,6 +295,7 @@
 				447D08931B95BD1700414080 /* XKTabBarController.m */,
 				447D089F1B95CB6F00414080 /* XKTabBar.h */,
 				447D08A01B95CB6F00414080 /* XKTabBar.m */,
+				447D08A21B95E10900414080 /* PrefixHeader.pch */,
 			);
 			path = "Other-其他";
 			sourceTree = "<group>";
@@ -305,6 +321,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		447D08A31B95E24A00414080 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				447D08A41B95E31300414080 /* UIBarButtonItem+XK.h */,
+				447D08A51B95E31300414080 /* UIBarButtonItem+XK.m */,
+			);
+			path = category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,9 +434,12 @@
 			files = (
 				447D089A1B95BD1700414080 /* XKNewViewController.m in Sources */,
 				447D08971B95BD1700414080 /* XKEssenceViewController.m in Sources */,
+				447D08AC1B95F37A00414080 /* XKTagViewController.m in Sources */,
 				447D08991B95BD1700414080 /* XKMeViewController.m in Sources */,
 				447D089E1B95BD1700414080 /* XKTabBarController.m in Sources */,
+				447D08A61B95E31300414080 /* UIBarButtonItem+XK.m in Sources */,
 				447D08A11B95CB6F00414080 /* XKTabBar.m in Sources */,
+				447D08A91B95EC8800414080 /* XKSettingViewController.m in Sources */,
 				447D08981B95BD1700414080 /* XKFriendTrendsViewController.m in Sources */,
 				447D089D1B95BD1700414080 /* main.m in Sources */,
 				447D089B1B95BD1700414080 /* AppDelegate.m in Sources */,
@@ -522,6 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "百思不得姐/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Classes/Other-其他/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -533,6 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "百思不得姐/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Classes/Other-其他/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

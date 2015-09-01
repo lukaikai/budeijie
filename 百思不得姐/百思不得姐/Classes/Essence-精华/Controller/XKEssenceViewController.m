@@ -7,6 +7,7 @@
 //
 
 #import "XKEssenceViewController.h"
+#import "XKTagViewController.h"
 
 @interface XKEssenceViewController ()
 
@@ -18,6 +19,15 @@
     [super viewDidLoad];
 
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    
+    // 导航栏左边按钮
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
 }
 
+- (void)tagClick
+{
+    XKTagViewController *tagVc = [[XKTagViewController alloc] init];
+    tagVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:tagVc animated:YES];
+}
 @end

@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by MD313  on 15/9/1.
+//  Copyright (c) 2015年 xiaokai. All rights reserved.
+//
+
+#ifndef ______PrefixHeader_pch
+#define ______PrefixHeader_pch
+
+#import "UIBarButtonItem+XK.h"
+// 日志输出
+#ifdef DEBUG // 开发阶段-DEBUG阶段:使用Log
+#define XKLog(...) NSLog(__VA_ARGS__)
+#else // 发布阶段-上线阶段:移除Log
+#define XKLog(...)
+#endif
+
+#endif
