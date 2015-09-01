@@ -17,6 +17,7 @@
 		447D089C1B95BD1700414080 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 447D08901B95BD1700414080 /* Info.plist */; };
 		447D089D1B95BD1700414080 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08911B95BD1700414080 /* main.m */; };
 		447D089E1B95BD1700414080 /* XKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08931B95BD1700414080 /* XKTabBarController.m */; };
+		447D08A11B95CB6F00414080 /* XKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08A01B95CB6F00414080 /* XKTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		447D08911B95BD1700414080 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		447D08921B95BD1700414080 /* XKTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTabBarController.h; sourceTree = "<group>"; };
 		447D08931B95BD1700414080 /* XKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTabBarController.m; sourceTree = "<group>"; };
+		447D089F1B95CB6F00414080 /* XKTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTabBar.h; sourceTree = "<group>"; };
+		447D08A01B95CB6F00414080 /* XKTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +278,8 @@
 				447D08911B95BD1700414080 /* main.m */,
 				447D08921B95BD1700414080 /* XKTabBarController.h */,
 				447D08931B95BD1700414080 /* XKTabBarController.m */,
+				447D089F1B95CB6F00414080 /* XKTabBar.h */,
+				447D08A01B95CB6F00414080 /* XKTabBar.m */,
 			);
 			path = "Other-其他";
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 				447D08971B95BD1700414080 /* XKEssenceViewController.m in Sources */,
 				447D08991B95BD1700414080 /* XKMeViewController.m in Sources */,
 				447D089E1B95BD1700414080 /* XKTabBarController.m in Sources */,
+				447D08A11B95CB6F00414080 /* XKTabBar.m in Sources */,
 				447D08981B95BD1700414080 /* XKFriendTrendsViewController.m in Sources */,
 				447D089D1B95BD1700414080 /* main.m in Sources */,
 				447D089B1B95BD1700414080 /* AppDelegate.m in Sources */,

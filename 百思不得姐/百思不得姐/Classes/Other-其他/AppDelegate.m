@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "XKTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,7 +19,7 @@
     // 创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     // 设置窗口根控制器
-    UITabBarController *tabBarC = [[UITabBarController alloc] init];
+    UITabBarController *tabBarC = [[XKTabBarController alloc] init];
     tabBarC.view.backgroundColor = [UIColor redColor];
     self.window.rootViewController = tabBarC;
     // 显示窗口
