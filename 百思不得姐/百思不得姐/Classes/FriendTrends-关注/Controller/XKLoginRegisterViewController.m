@@ -47,7 +47,7 @@
 - (IBAction)loginOrRegister:(UIButton *)sender
 {
     if (self.leftSpace.constant == 0) {
-        self.leftSpace.constant = self.view.width;
+        self.leftSpace.constant = - self.view.width;
         sender.selected = YES;
     }else{
         self.leftSpace.constant = 0;

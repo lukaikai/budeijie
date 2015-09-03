@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XKLoginRegisterViewController">
             <connections>
-                <outlet property="leftSpace" destination="5Yn-s4-E6m" id="LnR-YW-L7G"/>
+                <outlet property="leftSpace" destination="n9h-Yq-kxv" id="sti-3j-Ze7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
