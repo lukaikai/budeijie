@@ -11,6 +11,7 @@
 #import "XKNewViewController.h"
 #import "XKFriendTrendsViewController.h"
 #import "XKMeViewController.h"
+#import "XKNavigationController.h"
 #import "XKTabBar.h"
 @interface XKTabBarController ()
 
@@ -26,6 +27,9 @@
     [self setupItem];
     // 设置自定义tabbar
     [self setValue:[[XKTabBar alloc] init] forKeyPath:@"tabBar"];
+    
+    // 背景颜色
+    self.view.backgroundColor = XKCommonBgColor;
 }
 /**
  *  添加自控制器
@@ -50,7 +54,7 @@
  */
 - (void)setupChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
 {
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    XKNavigationController *nav = [[XKNavigationController alloc] initWithRootViewController:vc];
     nav.view.backgroundColor = [UIColor grayColor];
     nav.tabBarItem.title = title;
     nav.tabBarItem.image = [UIImage imageNamed:image];

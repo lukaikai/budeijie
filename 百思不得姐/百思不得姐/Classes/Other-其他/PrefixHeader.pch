@@ -16,5 +16,15 @@
 #else // 发布阶段-上线阶段:移除Log
 #define XKLog(...)
 #endif
+// 颜色
+#define XKRGBAColor(r , g, b, a) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a) / 255.0]
+// 不透明颜色
+#define XKColor(r, g, b) XKRGBAColor((r) , (g), (b), 255)
+// 灰色
+#define XKGrayColor(v) XKColor ((v), (v), (v))
+// 共同的背景色
+#define XKCommonBgColor XKGrayColor(215)
 
+// 方法输出
+#define XKLogFunc XKLog(@"%s", __func__)
 #endif

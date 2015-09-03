@@ -24,6 +24,9 @@
     UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" target:self action:@selector(settingClick)];
     
     self.navigationItem.rightBarButtonItems = @[settingItem, moonItem];
+    
+    // 背景颜色
+    self.view.backgroundColor = XKCommonBgColor;
 }
 
 - (void)btnClick1
@@ -33,7 +36,7 @@
 - (void)settingClick
 {
     XKSettingViewController *setting = [[XKSettingViewController alloc] init];
-    setting.hidesBottomBarWhenPushed = YES;
+    
     [self.navigationController pushViewController:setting animated:YES];
 }
 @end

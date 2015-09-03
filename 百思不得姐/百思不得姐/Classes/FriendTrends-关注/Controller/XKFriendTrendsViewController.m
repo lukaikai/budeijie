@@ -7,6 +7,7 @@
 //
 
 #import "XKFriendTrendsViewController.h"
+#import "XKLoginRegisterViewController.h"
 
 @interface XKFriendTrendsViewController ()
 
@@ -18,12 +19,26 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"我的关注";
+    
     // 导航栏左边按钮
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" target:self action:@selector(btnClick)];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" target:self action:@selector(friendsRecommendClick)];
+    
+    // 背景颜色
+    self.view.backgroundColor = XKCommonBgColor;
 }
 
-- (void)btnClick
+- (void)friendsRecommendClick
 {
-    XKLog(@"%s",__func__);
+    UITableViewController *TableViewC = [[UITableViewController alloc] init];
+    [self.navigationController pushViewController:TableViewC animated:YES];
+    
+}
+/**
+ *  立即登录
+ */
+- (IBAction)loginRegister
+{
+    XKLoginRegisterViewController *loginRegister = [[XKLoginRegisterViewController alloc] init];
+    [self presentViewController:loginRegister animated:YES completion:nil];
 }
 @end

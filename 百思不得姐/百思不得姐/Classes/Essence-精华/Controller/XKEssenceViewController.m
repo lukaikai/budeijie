@@ -22,12 +22,15 @@
     
     // 导航栏左边按钮
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
+    
+    // 背景颜色
+    self.view.backgroundColor = XKCommonBgColor;
 }
 
 - (void)tagClick
 {
     XKTagViewController *tagVc = [[XKTagViewController alloc] init];
-    tagVc.hidesBottomBarWhenPushed = YES;
+
     [self.navigationController pushViewController:tagVc animated:YES];
 }
 @end
