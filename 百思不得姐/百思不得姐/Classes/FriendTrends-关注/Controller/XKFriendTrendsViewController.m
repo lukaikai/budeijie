@@ -39,6 +39,7 @@
 - (IBAction)loginRegister
 {
     XKLoginRegisterViewController *loginRegister = [[XKLoginRegisterViewController alloc] init];
+   
     [self presentViewController:loginRegister animated:YES completion:nil];
 }
 @end

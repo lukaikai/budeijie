@@ -26,6 +26,7 @@
 		44E652921B98272C009C3AC9 /* UIView+XKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E652911B98272C009C3AC9 /* UIView+XKExtension.m */; };
 		44E652961B982852009C3AC9 /* XKLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E652941B982852009C3AC9 /* XKLoginRegisterViewController.m */; };
 		44E652971B982852009C3AC9 /* XKLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E652951B982852009C3AC9 /* XKLoginRegisterViewController.xib */; };
+		44E6529A1B983787009C3AC9 /* XKQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E652991B983787009C3AC9 /* XKQuickLoginButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		44E652931B982852009C3AC9 /* XKLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKLoginRegisterViewController.h; sourceTree = "<group>"; };
 		44E652941B982852009C3AC9 /* XKLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKLoginRegisterViewController.m; sourceTree = "<group>"; };
 		44E652951B982852009C3AC9 /* XKLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		44E652981B983787009C3AC9 /* XKQuickLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKQuickLoginButton.h; sourceTree = "<group>"; };
+		44E652991B983787009C3AC9 /* XKQuickLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKQuickLoginButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +231,8 @@
 		447D08801B95BD1700414080 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				44E652981B983787009C3AC9 /* XKQuickLoginButton.h */,
+				44E652991B983787009C3AC9 /* XKQuickLoginButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -479,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E6529A1B983787009C3AC9 /* XKQuickLoginButton.m in Sources */,
 				44E652961B982852009C3AC9 /* XKLoginRegisterViewController.m in Sources */,
 				44E6528A1B9812F1009C3AC9 /* XKTabBar.m in Sources */,
 				447D089A1B95BD1700414080 /* XKNewViewController.m in Sources */,

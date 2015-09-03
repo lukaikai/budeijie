@@ -10,6 +10,7 @@
 #define ______PrefixHeader_pch
 
 #import "UIBarButtonItem+XK.h"
+#import "UIView+XKExtension.h"
 // 日志输出
 #ifdef DEBUG // 开发阶段-DEBUG阶段:使用Log
 #define XKLog(...) NSLog(__VA_ARGS__)
