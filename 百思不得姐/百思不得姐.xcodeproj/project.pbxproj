@@ -27,6 +27,7 @@
 		44E652961B982852009C3AC9 /* XKLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E652941B982852009C3AC9 /* XKLoginRegisterViewController.m */; };
 		44E652971B982852009C3AC9 /* XKLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E652951B982852009C3AC9 /* XKLoginRegisterViewController.xib */; };
 		44E6529A1B983787009C3AC9 /* XKQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E652991B983787009C3AC9 /* XKQuickLoginButton.m */; };
+		44E6529D1B984BAA009C3AC9 /* XKLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E6529C1B984BAA009C3AC9 /* XKLoginRegisterTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		44E652951B982852009C3AC9 /* XKLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		44E652981B983787009C3AC9 /* XKQuickLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKQuickLoginButton.h; sourceTree = "<group>"; };
 		44E652991B983787009C3AC9 /* XKQuickLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKQuickLoginButton.m; sourceTree = "<group>"; };
+		44E6529B1B984BAA009C3AC9 /* XKLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKLoginRegisterTextField.h; sourceTree = "<group>"; };
+		44E6529C1B984BAA009C3AC9 /* XKLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKLoginRegisterTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +236,8 @@
 			children = (
 				44E652981B983787009C3AC9 /* XKQuickLoginButton.h */,
 				44E652991B983787009C3AC9 /* XKQuickLoginButton.m */,
+				44E6529B1B984BAA009C3AC9 /* XKLoginRegisterTextField.h */,
+				44E6529C1B984BAA009C3AC9 /* XKLoginRegisterTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -499,6 +504,7 @@
 				447D08981B95BD1700414080 /* XKFriendTrendsViewController.m in Sources */,
 				447D089D1B95BD1700414080 /* main.m in Sources */,
 				447D089B1B95BD1700414080 /* AppDelegate.m in Sources */,
+				44E6529D1B984BAA009C3AC9 /* XKLoginRegisterTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

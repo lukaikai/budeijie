@@ -9,6 +9,7 @@
 #import "XKLoginRegisterViewController.h"
 
 @interface XKLoginRegisterViewController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftSpace;
 
 @end
 
@@ -35,5 +36,22 @@
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
+}
+/**
+ *  退出键盘
+ */
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+- (IBAction)loginOrRegister:(UIButton *)sender
+{
+    if (self.leftSpace.constant == 0) {
+        self.leftSpace.constant = - self.view.width;
+        sender.selected = YES;
+    }else{
+        self.leftSpace.constant = 0;
+        sender.selected = NO;
+    }
 }
 @end
