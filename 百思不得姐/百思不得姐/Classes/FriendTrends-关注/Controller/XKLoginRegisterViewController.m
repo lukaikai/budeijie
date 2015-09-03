@@ -46,6 +46,7 @@
 }
 - (IBAction)loginOrRegister:(UIButton *)sender
 {
+    // 修改约束
     if (self.leftSpace.constant == 0) {
         self.leftSpace.constant = - self.view.width;
         sender.selected = YES;

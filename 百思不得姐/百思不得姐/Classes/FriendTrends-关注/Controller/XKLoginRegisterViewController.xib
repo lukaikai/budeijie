@@ -293,7 +293,6 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="6gP-Lm-ymS" secondAttribute="trailing" id="0Pg-4Q-hsa"/>
-                <constraint firstAttribute="trailing" secondItem="NcM-Ja-Yeg" secondAttribute="trailing" id="5Yn-s4-E6m"/>
                 <constraint firstItem="NcM-Ja-Yeg" firstAttribute="width" secondItem="tft-1i-2ZH" secondAttribute="width" id="98g-x1-NU3"/>
                 <constraint firstItem="bck-mV-tni" firstAttribute="width" secondItem="NcM-Ja-Yeg" secondAttribute="width" id="DrD-Vu-rUc"/>
                 <constraint firstItem="tft-1i-2ZH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GdL-uL-tnY"/>
