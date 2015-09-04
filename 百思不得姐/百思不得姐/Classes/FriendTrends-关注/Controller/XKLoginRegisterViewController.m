@@ -9,6 +9,7 @@
 #import "XKLoginRegisterViewController.h"
 
 @interface XKLoginRegisterViewController ()
+// 登录界面 左边约束
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftSpace;
 
 @end
@@ -22,7 +23,8 @@
 /**
  *  关闭
  */
-- (IBAction)close {
+- (IBAction)close
+{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -32,7 +34,6 @@
 /**
  * 让状态栏样式为白色
  */
-
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
@@ -44,6 +45,9 @@
 {
     [self.view endEditing:YES];
 }
+/**
+ *  修改约束 切换至注册界面
+ */
 - (IBAction)loginOrRegister:(UIButton *)sender
 {
     // 修改约束
