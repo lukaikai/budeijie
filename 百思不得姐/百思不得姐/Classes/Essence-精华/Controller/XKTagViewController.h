@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XKTagViewController : UIViewController
+@interface XKTagViewController : UITableViewController
 
 @end

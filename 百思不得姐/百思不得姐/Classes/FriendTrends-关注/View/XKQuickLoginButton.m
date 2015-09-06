@@ -4,7 +4,7 @@
 //
 //  Created by MD313  on 15/9/3.
 //  Copyright (c) 2015年 xiaokai. All rights reserved.
-//
+//  快速登录按钮
 
 #import "XKQuickLoginButton.h"
 

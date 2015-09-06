@@ -19,6 +19,13 @@
 		447D08A61B95E31300414080 /* UIBarButtonItem+XK.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08A51B95E31300414080 /* UIBarButtonItem+XK.m */; };
 		447D08A91B95EC8800414080 /* XKSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08A81B95EC8800414080 /* XKSettingViewController.m */; };
 		447D08AC1B95F37A00414080 /* XKTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08AB1B95F37A00414080 /* XKTagViewController.m */; };
+		44B034C01B9C517800AB814F /* XKTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B034BE1B9C517800AB814F /* XKTagCell.m */; };
+		44B034C11B9C517800AB814F /* XKTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44B034BF1B9C517800AB814F /* XKTagCell.xib */; };
+		44B034C31B9C561600AB814F /* NSDictionary+LOG.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B034C21B9C561600AB814F /* NSDictionary+LOG.m */; };
+		44B034C61B9C565A00AB814F /* XKTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B034C51B9C565A00AB814F /* XKTag.m */; };
+		44B034CC1B9C656E00AB814F /* UIImage+XKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B034CB1B9C656E00AB814F /* UIImage+XKExtension.m */; };
+		44B034CF1B9C688400AB814F /* UIImageView+XKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B034CE1B9C688400AB814F /* UIImageView+XKExtension.m */; };
+		44B034D21B9C7EFC00AB814F /* XKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B034D11B9C7EFC00AB814F /* XKConst.m */; };
 		44E652891B9812F1009C3AC9 /* XKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E652841B9812F1009C3AC9 /* XKTabBarController.m */; };
 		44E6528A1B9812F1009C3AC9 /* XKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E652881B9812F1009C3AC9 /* XKTabBar.m */; };
 		44E6528D1B9813D8009C3AC9 /* XKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E6528C1B9813D8009C3AC9 /* XKNavigationController.m */; };
@@ -66,6 +73,18 @@
 		447D08A81B95EC8800414080 /* XKSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKSettingViewController.m; sourceTree = "<group>"; };
 		447D08AA1B95F37A00414080 /* XKTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTagViewController.h; sourceTree = "<group>"; };
 		447D08AB1B95F37A00414080 /* XKTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTagViewController.m; sourceTree = "<group>"; };
+		44B034BD1B9C517800AB814F /* XKTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTagCell.h; sourceTree = "<group>"; };
+		44B034BE1B9C517800AB814F /* XKTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTagCell.m; sourceTree = "<group>"; };
+		44B034BF1B9C517800AB814F /* XKTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKTagCell.xib; sourceTree = "<group>"; };
+		44B034C21B9C561600AB814F /* NSDictionary+LOG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LOG.m"; sourceTree = "<group>"; };
+		44B034C41B9C565A00AB814F /* XKTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTag.h; sourceTree = "<group>"; };
+		44B034C51B9C565A00AB814F /* XKTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTag.m; sourceTree = "<group>"; };
+		44B034CA1B9C656E00AB814F /* UIImage+XKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XKExtension.h"; sourceTree = "<group>"; };
+		44B034CB1B9C656E00AB814F /* UIImage+XKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XKExtension.m"; sourceTree = "<group>"; };
+		44B034CD1B9C688400AB814F /* UIImageView+XKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XKExtension.h"; sourceTree = "<group>"; };
+		44B034CE1B9C688400AB814F /* UIImageView+XKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XKExtension.m"; sourceTree = "<group>"; };
+		44B034D01B9C7EFC00AB814F /* XKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKConst.h; sourceTree = "<group>"; };
+		44B034D11B9C7EFC00AB814F /* XKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKConst.m; sourceTree = "<group>"; };
 		44E652831B9812F1009C3AC9 /* XKTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTabBarController.h; sourceTree = "<group>"; };
 		44E652841B9812F1009C3AC9 /* XKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTabBarController.m; sourceTree = "<group>"; };
 		44E652871B9812F1009C3AC9 /* XKTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTabBar.h; sourceTree = "<group>"; };
@@ -197,6 +216,8 @@
 		447D08791B95BD1700414080 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				44B034C41B9C565A00AB814F /* XKTag.h */,
+				44B034C51B9C565A00AB814F /* XKTag.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +225,9 @@
 		447D087A1B95BD1700414080 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				44B034BD1B9C517800AB814F /* XKTagCell.h */,
+				44B034BE1B9C517800AB814F /* XKTagCell.m */,
+				44B034BF1B9C517800AB814F /* XKTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,7 +352,10 @@
 				447D088F1B95BD1700414080 /* AppDelegate.m */,
 				447D08901B95BD1700414080 /* Info.plist */,
 				447D08911B95BD1700414080 /* main.m */,
+				44B034C21B9C561600AB814F /* NSDictionary+LOG.m */,
 				447D08A21B95E10900414080 /* PrefixHeader.pch */,
+				44B034D01B9C7EFC00AB814F /* XKConst.h */,
+				44B034D11B9C7EFC00AB814F /* XKConst.m */,
 			);
 			path = "Other-其他";
 			sourceTree = "<group>";
@@ -363,6 +390,10 @@
 				447D08A51B95E31300414080 /* UIBarButtonItem+XK.m */,
 				44E652901B98272C009C3AC9 /* UIView+XKExtension.h */,
 				44E652911B98272C009C3AC9 /* UIView+XKExtension.m */,
+				44B034CA1B9C656E00AB814F /* UIImage+XKExtension.h */,
+				44B034CB1B9C656E00AB814F /* UIImage+XKExtension.m */,
+				44B034CD1B9C688400AB814F /* UIImageView+XKExtension.h */,
+				44B034CE1B9C688400AB814F /* UIImageView+XKExtension.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -496,6 +527,7 @@
 			files = (
 				447D08641B95B76500414080 /* Images.xcassets in Resources */,
 				447D089C1B95BD1700414080 /* Info.plist in Resources */,
+				44B034C11B9C517800AB814F /* XKTagCell.xib in Resources */,
 				44E652971B982852009C3AC9 /* XKLoginRegisterViewController.xib in Resources */,
 				44E6528F1B98220B009C3AC9 /* XKFriendTrendsViewController.xib in Resources */,
 			);
@@ -548,14 +580,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44B034D21B9C7EFC00AB814F /* XKConst.m in Sources */,
 				44E6529A1B983787009C3AC9 /* XKQuickLoginButton.m in Sources */,
 				44E652961B982852009C3AC9 /* XKLoginRegisterViewController.m in Sources */,
 				44E6528A1B9812F1009C3AC9 /* XKTabBar.m in Sources */,
 				447D089A1B95BD1700414080 /* XKNewViewController.m in Sources */,
+				44B034CC1B9C656E00AB814F /* UIImage+XKExtension.m in Sources */,
+				44B034C01B9C517800AB814F /* XKTagCell.m in Sources */,
 				447D08971B95BD1700414080 /* XKEssenceViewController.m in Sources */,
 				447D08AC1B95F37A00414080 /* XKTagViewController.m in Sources */,
+				44B034C31B9C561600AB814F /* NSDictionary+LOG.m in Sources */,
 				447D08991B95BD1700414080 /* XKMeViewController.m in Sources */,
+				44B034C61B9C565A00AB814F /* XKTag.m in Sources */,
 				44E652891B9812F1009C3AC9 /* XKTabBarController.m in Sources */,
+				44B034CF1B9C688400AB814F /* UIImageView+XKExtension.m in Sources */,
 				44E652921B98272C009C3AC9 /* UIView+XKExtension.m in Sources */,
 				44E6528D1B9813D8009C3AC9 /* XKNavigationController.m in Sources */,
 				447D08A61B95E31300414080 /* UIBarButtonItem+XK.m in Sources */,

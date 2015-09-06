@@ -4,7 +4,7 @@
 //
 //  Created by MD313  on 15/9/1.
 //  Copyright (c) 2015年 xiaokai. All rights reserved.
-//
+//  精华首页
 
 #import "XKEssenceViewController.h"
 #import "XKTagViewController.h"
