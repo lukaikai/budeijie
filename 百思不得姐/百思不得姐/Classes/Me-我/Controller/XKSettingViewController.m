@@ -21,18 +21,26 @@
  
     // 背景颜色
     self.view.backgroundColor = XKCommonBgColor;
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"kk"];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 0;
+    return 1;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"kk"];
+    cell.textLabel.text = @"ddd";
+    return cell;
+}
 @end

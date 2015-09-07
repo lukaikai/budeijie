@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XKWebViewController">
+            <connections>
+                <outlet property="bacItem" destination="p9l-Gi-dvw" id="oYK-Yc-lPn"/>
+                <outlet property="forwardItem" destination="prA-kG-Msk" id="GyO-UD-yyH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="pSQ-Y0-fGg" id="yGb-pQ-aZh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUq-ci-mSf">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="KVB-aI-vSY"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem enabled="NO" image="back" id="p9l-Gi-dvw">
+                            <connections>
+                                <action selector="back:" destination="-1" id="C4c-LF-QS1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem enabled="NO" image="forward" id="prA-kG-Msk">
+                            <connections>
+                                <action selector="forward:" destination="-1" id="hMx-hV-oHd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ZT2-dD-Fsa"/>
+                        <barButtonItem systemItem="refresh" id="rzT-X1-vbL">
+                            <connections>
+                                <action selector="refresh:" destination="-1" id="f15-Wn-N5k"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSQ-Y0-fGg">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="f3J-PY-Ylv"/>
+                    </connections>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="TUq-ci-mSf" firstAttribute="top" secondItem="pSQ-Y0-fGg" secondAttribute="bottom" id="7p0-dg-mqh"/>
+                <constraint firstItem="pSQ-Y0-fGg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WDN-PE-FRx"/>
+                <constraint firstAttribute="trailing" secondItem="TUq-ci-mSf" secondAttribute="trailing" id="WUC-9s-eKf"/>
+                <constraint firstAttribute="bottom" secondItem="TUq-ci-mSf" secondAttribute="bottom" id="Yvl-om-bqo"/>
+                <constraint firstItem="TUq-ci-mSf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Z1N-9h-M9C"/>
+                <constraint firstAttribute="trailing" secondItem="pSQ-Y0-fGg" secondAttribute="trailing" id="eWr-m5-A7C"/>
+                <constraint firstItem="pSQ-Y0-fGg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="z0R-9H-XgD"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="32" height="32"/>
+        <image name="forward" width="32" height="32"/>
+    </resources>
+</document>

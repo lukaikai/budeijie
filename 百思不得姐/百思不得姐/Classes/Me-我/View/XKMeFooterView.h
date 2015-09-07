@@ -1,13 +1,13 @@
 //
-//  XKMeViewController.h
+//  XKMeFooterView.h
 //  百思不得姐
 //
-//  Created by MD313  on 15/9/1.
+//  Created by MD313  on 15/9/7.
 //  Copyright (c) 2015年 xiaokai. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface XKMeViewController : UITableViewController
+@interface XKMeFooterView : UIView
 
 @end

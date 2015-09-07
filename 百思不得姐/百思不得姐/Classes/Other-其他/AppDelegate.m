@@ -15,15 +15,15 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOption
+{
     // 创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     // 设置窗口根控制器
-    UITabBarController *tabBarC = [[XKTabBarController alloc] init];
-    tabBarC.view.backgroundColor = [UIColor redColor];
-    self.window.rootViewController = tabBarC;
+    self.window.rootViewController = [[XKTabBarController alloc] init];
     // 显示窗口
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
