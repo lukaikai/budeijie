@@ -14,6 +14,7 @@
 #import "UIImage+XKExtension.h"
 #import "UIImageView+XKExtension.h"
 #import "XKConst.h"
+#import "NSString+XKExtension.h"
 // 日志输出
 #ifdef DEBUG // 开发阶段-DEBUG阶段:使用Log
 #define XKLog(...) NSLog(__VA_ARGS__)
