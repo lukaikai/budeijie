@@ -33,4 +33,7 @@
 #define XKLogFunc XKLog(@"%s", __func__)
 // 弱引用
 #define XKWeakSelf __weak typeof(self) weakSelf = self;
+// 屏幕尺寸
+#define XKScreenH [UIScreen mainScreen].bounds.size.height
+#define XKScreenW [UIScreen mainScreen].bounds.size.width
 #endif

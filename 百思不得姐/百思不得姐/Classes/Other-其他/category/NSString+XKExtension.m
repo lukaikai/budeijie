@@ -38,4 +38,25 @@
         return [mar attributesOfItemAtPath:self error:nil].fileSize;
     }
 }
+/*
+- (void)fileSize
+{
+    // 文件管理者
+    NSFileManager *mar = [NSFileManager defaultManager];
+    // 文件路径
+    NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *filePath = [caches stringByAppendingPathComponent:@"default"];
+    CGFloat size = 0;
+    // 获得文件夹下所有内容
+    //    NSArray *subPaths = [mar subpathsAtPath:filePath];
+    NSDirectoryEnumerator *enumerator = [mar enumeratorAtPath:filePath];
+    for (NSString *subPath in enumerator) {
+        // 获得全路径
+        NSString *fullSubPath = [filePath stringByAppendingPathComponent:subPath];
+        NSDictionary *attrs = [mar attributesOfItemAtPath:fullSubPath error:nil];
+        size += attrs.fileSize;
+    }
+    XKLog(@"%.1fM",size / 1000 / 1000);
+}
+*/
 @end

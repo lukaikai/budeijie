@@ -7,7 +7,7 @@
 //
 
 #import "XKTabBar.h"
-
+#import "XKPublishViewController.h"
 @interface XKTabBar ()
 
 @property (nonatomic, weak)UIButton *publishButton;
@@ -18,17 +18,25 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        
+        // 添加发布按钮
         UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [publishButton setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [publishButton setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateSelected];
         [publishButton sizeToFit];
-        
+        [publishButton addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:publishButton];
         self.publishButton = publishButton;
     }
     
     return self;
+}
+/**
+ *  发帖子
+ */
+- (void)publishClick
+{
+    XKPublishViewController *publishVc = [[XKPublishViewController alloc] init];
+    [self.window.rootViewController presentViewController:publishVc animated:NO completion:nil];
 }
 - (void)layoutSubviews
 {

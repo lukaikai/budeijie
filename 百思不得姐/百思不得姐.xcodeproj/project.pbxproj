@@ -13,6 +13,10 @@
 		444D7CE11B9DBA35007EF7D4 /* XKSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D7CE01B9DBA35007EF7D4 /* XKSquareButton.m */; };
 		444D7CE51B9DDFF3007EF7D4 /* XKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D7CE31B9DDFF3007EF7D4 /* XKWebViewController.m */; };
 		444D7CE61B9DDFF3007EF7D4 /* XKWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 444D7CE41B9DDFF3007EF7D4 /* XKWebViewController.xib */; };
+		4469D0A01BA0471D0008008F /* XKPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4469D09E1BA0471D0008008F /* XKPublishViewController.m */; };
+		4469D0A11BA0471D0008008F /* XKPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4469D09F1BA0471D0008008F /* XKPublishViewController.xib */; };
+		4469D0A41BA04AE70008008F /* XKPublishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4469D0A31BA04AE70008008F /* XKPublishButton.m */; };
+		4469D0A71BA07D420008008F /* XKPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4469D0A61BA07D420008008F /* XKPostWordViewController.m */; };
 		447D085A1B95B48300414080 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08591B95B48300414080 /* _____Tests.m */; };
 		447D08641B95B76500414080 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447D08631B95B76500414080 /* Images.xcassets */; };
 		447D08971B95BD1700414080 /* XKEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08781B95BD1700414080 /* XKEssenceViewController.m */; };
@@ -25,6 +29,7 @@
 		447D08A61B95E31300414080 /* UIBarButtonItem+XK.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08A51B95E31300414080 /* UIBarButtonItem+XK.m */; };
 		447D08A91B95EC8800414080 /* XKSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08A81B95EC8800414080 /* XKSettingViewController.m */; };
 		447D08AC1B95F37A00414080 /* XKTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08AB1B95F37A00414080 /* XKTagViewController.m */; };
+		449D44571BA116DC007833D5 /* XKPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D44561BA116DC007833D5 /* XKPlaceholderTextView.m */; };
 		44B034C01B9C517800AB814F /* XKTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B034BE1B9C517800AB814F /* XKTagCell.m */; };
 		44B034C11B9C517800AB814F /* XKTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44B034BF1B9C517800AB814F /* XKTagCell.xib */; };
 		44B034C31B9C561600AB814F /* NSDictionary+LOG.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B034C21B9C561600AB814F /* NSDictionary+LOG.m */; };
@@ -68,6 +73,13 @@
 		444D7CE21B9DDFF3007EF7D4 /* XKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKWebViewController.h; sourceTree = "<group>"; };
 		444D7CE31B9DDFF3007EF7D4 /* XKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKWebViewController.m; sourceTree = "<group>"; };
 		444D7CE41B9DDFF3007EF7D4 /* XKWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKWebViewController.xib; sourceTree = "<group>"; };
+		4469D09D1BA0471D0008008F /* XKPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKPublishViewController.h; sourceTree = "<group>"; };
+		4469D09E1BA0471D0008008F /* XKPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKPublishViewController.m; sourceTree = "<group>"; };
+		4469D09F1BA0471D0008008F /* XKPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKPublishViewController.xib; sourceTree = "<group>"; };
+		4469D0A21BA04AE70008008F /* XKPublishButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKPublishButton.h; sourceTree = "<group>"; };
+		4469D0A31BA04AE70008008F /* XKPublishButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKPublishButton.m; sourceTree = "<group>"; };
+		4469D0A51BA07D420008008F /* XKPostWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKPostWordViewController.h; sourceTree = "<group>"; };
+		4469D0A61BA07D420008008F /* XKPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKPostWordViewController.m; sourceTree = "<group>"; };
 		447D083A1B95B48300414080 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		447D08531B95B48300414080 /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		447D08581B95B48300414080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +104,8 @@
 		447D08A81B95EC8800414080 /* XKSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKSettingViewController.m; sourceTree = "<group>"; };
 		447D08AA1B95F37A00414080 /* XKTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTagViewController.h; sourceTree = "<group>"; };
 		447D08AB1B95F37A00414080 /* XKTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTagViewController.m; sourceTree = "<group>"; };
+		449D44551BA116DC007833D5 /* XKPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKPlaceholderTextView.h; sourceTree = "<group>"; };
+		449D44561BA116DC007833D5 /* XKPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKPlaceholderTextView.m; sourceTree = "<group>"; };
 		44B034BD1B9C517800AB814F /* XKTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTagCell.h; sourceTree = "<group>"; };
 		44B034BE1B9C517800AB814F /* XKTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTagCell.m; sourceTree = "<group>"; };
 		44B034BF1B9C517800AB814F /* XKTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKTagCell.xib; sourceTree = "<group>"; };
@@ -408,6 +422,11 @@
 		447D08951B95BD1700414080 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4469D09D1BA0471D0008008F /* XKPublishViewController.h */,
+				4469D09E1BA0471D0008008F /* XKPublishViewController.m */,
+				4469D09F1BA0471D0008008F /* XKPublishViewController.xib */,
+				4469D0A51BA07D420008008F /* XKPostWordViewController.h */,
+				4469D0A61BA07D420008008F /* XKPostWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -415,6 +434,10 @@
 		447D08961B95BD1700414080 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4469D0A21BA04AE70008008F /* XKPublishButton.h */,
+				4469D0A31BA04AE70008008F /* XKPublishButton.m */,
+				449D44551BA116DC007833D5 /* XKPlaceholderTextView.h */,
+				449D44561BA116DC007833D5 /* XKPlaceholderTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -565,6 +588,7 @@
 			files = (
 				444D7CE61B9DDFF3007EF7D4 /* XKWebViewController.xib in Resources */,
 				447D08641B95B76500414080 /* Images.xcassets in Resources */,
+				4469D0A11BA0471D0008008F /* XKPublishViewController.xib in Resources */,
 				447D089C1B95BD1700414080 /* Info.plist in Resources */,
 				44B034C11B9C517800AB814F /* XKTagCell.xib in Resources */,
 				44E652971B982852009C3AC9 /* XKLoginRegisterViewController.xib in Resources */,
@@ -625,6 +649,7 @@
 				44E6528A1B9812F1009C3AC9 /* XKTabBar.m in Sources */,
 				447D089A1B95BD1700414080 /* XKNewViewController.m in Sources */,
 				44B034CC1B9C656E00AB814F /* UIImage+XKExtension.m in Sources */,
+				4469D0A41BA04AE70008008F /* XKPublishButton.m in Sources */,
 				444D7CD81B9DA506007EF7D4 /* XKMeCell.m in Sources */,
 				444D7CE11B9DBA35007EF7D4 /* XKSquareButton.m in Sources */,
 				44B034C01B9C517800AB814F /* XKTagCell.m in Sources */,
@@ -643,8 +668,11 @@
 				444D7CDE1B9DB1DE007EF7D4 /* XKSquare.m in Sources */,
 				444D7CE51B9DDFF3007EF7D4 /* XKWebViewController.m in Sources */,
 				447D08A61B95E31300414080 /* UIBarButtonItem+XK.m in Sources */,
+				4469D0A71BA07D420008008F /* XKPostWordViewController.m in Sources */,
 				447D08A91B95EC8800414080 /* XKSettingViewController.m in Sources */,
+				4469D0A01BA0471D0008008F /* XKPublishViewController.m in Sources */,
 				447D08981B95BD1700414080 /* XKFriendTrendsViewController.m in Sources */,
+				449D44571BA116DC007833D5 /* XKPlaceholderTextView.m in Sources */,
 				447D089D1B95BD1700414080 /* main.m in Sources */,
 				447D089B1B95BD1700414080 /* AppDelegate.m in Sources */,
 				44E6529D1B984BAA009C3AC9 /* XKLoginRegisterTextField.m in Sources */,

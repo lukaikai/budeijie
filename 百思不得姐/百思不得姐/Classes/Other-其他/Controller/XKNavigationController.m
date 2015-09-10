@@ -14,6 +14,30 @@
 
 @implementation XKNavigationController
 
++ (void)initialize
+{
+    UINavigationBar *bar = [UINavigationBar appearance];
+    // 设置背景
+    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    // 设置标题文字属性
+    NSMutableDictionary *barAttrs = [NSMutableDictionary dictionary];
+    barAttrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
+    [bar setTitleTextAttributes:barAttrs];
+    
+    /** 设置UIBarButtonItem */
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    
+    // UIControlStateNormal
+    NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
+    normalAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    normalAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+    [item setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
+    
+    // UIControlStateDisabled
+    NSMutableDictionary *disabledAttrs = [NSMutableDictionary dictionary];
+    disabledAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    [item setTitleTextAttributes:disabledAttrs forState:UIControlStateDisabled];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
