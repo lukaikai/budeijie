@@ -163,7 +163,7 @@
     for (int i = 0; i < self.buttons.count; i++) {
         XKPublishButton *button = self.buttons[i];
         
-        POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+        POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
         anim.toValue = @(button.y + XKScreenH);
         anim.beginTime = CACurrentMediaTime() + [self.times[i] doubleValue];
         
@@ -171,7 +171,7 @@
     }
     
     // 标语动画
-    POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
     anim.toValue = @(self.sloganView.y + XKScreenH);
     anim.beginTime = CACurrentMediaTime() + [self.times.lastObject doubleValue];
     XKWeakSelf;

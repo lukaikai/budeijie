@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		441118D71BA3EEF4000A234E /* XKTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 441118D61BA3EEF4000A234E /* XKTagTextField.m */; };
+		442BF0B91BA2EB7C00B34999 /* XKPostWordToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 442BF0B81BA2EB7C00B34999 /* XKPostWordToolbar.m */; };
+		442BF0BB1BA2EB9000B34999 /* XKPostWordToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 442BF0BA1BA2EB9000B34999 /* XKPostWordToolbar.xib */; };
+		442BF0C11BA2F9E700B34999 /* UITextField+XKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 442BF0C01BA2F9E700B34999 /* UITextField+XKExtension.m */; };
+		442BF0C41BA2FFC200B34999 /* XKAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442BF0C31BA2FFC200B34999 /* XKAddTagViewController.m */; };
+		442BF0C71BA3311400B34999 /* XKTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 442BF0C61BA3311400B34999 /* XKTagButton.m */; };
 		444D7CD81B9DA506007EF7D4 /* XKMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D7CD71B9DA506007EF7D4 /* XKMeCell.m */; };
 		444D7CDB1B9DAE67007EF7D4 /* XKMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D7CDA1B9DAE67007EF7D4 /* XKMeFooterView.m */; };
 		444D7CDE1B9DB1DE007EF7D4 /* XKSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D7CDD1B9DB1DE007EF7D4 /* XKSquare.m */; };
@@ -62,6 +68,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		441118D51BA3EEF4000A234E /* XKTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTagTextField.h; sourceTree = "<group>"; };
+		441118D61BA3EEF4000A234E /* XKTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTagTextField.m; sourceTree = "<group>"; };
+		442BF0B71BA2EB7C00B34999 /* XKPostWordToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKPostWordToolbar.h; sourceTree = "<group>"; };
+		442BF0B81BA2EB7C00B34999 /* XKPostWordToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKPostWordToolbar.m; sourceTree = "<group>"; };
+		442BF0BA1BA2EB9000B34999 /* XKPostWordToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKPostWordToolbar.xib; sourceTree = "<group>"; };
+		442BF0BF1BA2F9E700B34999 /* UITextField+XKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XKExtension.h"; sourceTree = "<group>"; };
+		442BF0C01BA2F9E700B34999 /* UITextField+XKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XKExtension.m"; sourceTree = "<group>"; };
+		442BF0C21BA2FFC200B34999 /* XKAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKAddTagViewController.h; sourceTree = "<group>"; };
+		442BF0C31BA2FFC200B34999 /* XKAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKAddTagViewController.m; sourceTree = "<group>"; };
+		442BF0C51BA3311400B34999 /* XKTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTagButton.h; sourceTree = "<group>"; };
+		442BF0C61BA3311400B34999 /* XKTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTagButton.m; sourceTree = "<group>"; };
 		444D7CD61B9DA506007EF7D4 /* XKMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKMeCell.h; sourceTree = "<group>"; };
 		444D7CD71B9DA506007EF7D4 /* XKMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKMeCell.m; sourceTree = "<group>"; };
 		444D7CD91B9DAE67007EF7D4 /* XKMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKMeFooterView.h; sourceTree = "<group>"; };
@@ -427,6 +444,8 @@
 				4469D09F1BA0471D0008008F /* XKPublishViewController.xib */,
 				4469D0A51BA07D420008008F /* XKPostWordViewController.h */,
 				4469D0A61BA07D420008008F /* XKPostWordViewController.m */,
+				442BF0C21BA2FFC200B34999 /* XKAddTagViewController.h */,
+				442BF0C31BA2FFC200B34999 /* XKAddTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -438,6 +457,13 @@
 				4469D0A31BA04AE70008008F /* XKPublishButton.m */,
 				449D44551BA116DC007833D5 /* XKPlaceholderTextView.h */,
 				449D44561BA116DC007833D5 /* XKPlaceholderTextView.m */,
+				442BF0B71BA2EB7C00B34999 /* XKPostWordToolbar.h */,
+				442BF0B81BA2EB7C00B34999 /* XKPostWordToolbar.m */,
+				442BF0BA1BA2EB9000B34999 /* XKPostWordToolbar.xib */,
+				442BF0C51BA3311400B34999 /* XKTagButton.h */,
+				442BF0C61BA3311400B34999 /* XKTagButton.m */,
+				441118D51BA3EEF4000A234E /* XKTagTextField.h */,
+				441118D61BA3EEF4000A234E /* XKTagTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -455,6 +481,8 @@
 				44B034CE1B9C688400AB814F /* UIImageView+XKExtension.m */,
 				44BD18A81B9E7C3A00305882 /* NSString+XKExtension.h */,
 				44BD18A91B9E7C3A00305882 /* NSString+XKExtension.m */,
+				442BF0BF1BA2F9E700B34999 /* UITextField+XKExtension.h */,
+				442BF0C01BA2F9E700B34999 /* UITextField+XKExtension.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -592,6 +620,7 @@
 				447D089C1B95BD1700414080 /* Info.plist in Resources */,
 				44B034C11B9C517800AB814F /* XKTagCell.xib in Resources */,
 				44E652971B982852009C3AC9 /* XKLoginRegisterViewController.xib in Resources */,
+				442BF0BB1BA2EB9000B34999 /* XKPostWordToolbar.xib in Resources */,
 				44E6528F1B98220B009C3AC9 /* XKFriendTrendsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,9 +674,12 @@
 			files = (
 				44B034D21B9C7EFC00AB814F /* XKConst.m in Sources */,
 				44E6529A1B983787009C3AC9 /* XKQuickLoginButton.m in Sources */,
+				442BF0C11BA2F9E700B34999 /* UITextField+XKExtension.m in Sources */,
+				442BF0B91BA2EB7C00B34999 /* XKPostWordToolbar.m in Sources */,
 				44E652961B982852009C3AC9 /* XKLoginRegisterViewController.m in Sources */,
 				44E6528A1B9812F1009C3AC9 /* XKTabBar.m in Sources */,
 				447D089A1B95BD1700414080 /* XKNewViewController.m in Sources */,
+				441118D71BA3EEF4000A234E /* XKTagTextField.m in Sources */,
 				44B034CC1B9C656E00AB814F /* UIImage+XKExtension.m in Sources */,
 				4469D0A41BA04AE70008008F /* XKPublishButton.m in Sources */,
 				444D7CD81B9DA506007EF7D4 /* XKMeCell.m in Sources */,
@@ -658,6 +690,7 @@
 				444D7CDB1B9DAE67007EF7D4 /* XKMeFooterView.m in Sources */,
 				44BD18AA1B9E7C3A00305882 /* NSString+XKExtension.m in Sources */,
 				44B034C31B9C561600AB814F /* NSDictionary+LOG.m in Sources */,
+				442BF0C71BA3311400B34999 /* XKTagButton.m in Sources */,
 				447D08991B95BD1700414080 /* XKMeViewController.m in Sources */,
 				44B034C61B9C565A00AB814F /* XKTag.m in Sources */,
 				44E652891B9812F1009C3AC9 /* XKTabBarController.m in Sources */,
@@ -671,6 +704,7 @@
 				4469D0A71BA07D420008008F /* XKPostWordViewController.m in Sources */,
 				447D08A91B95EC8800414080 /* XKSettingViewController.m in Sources */,
 				4469D0A01BA0471D0008008F /* XKPublishViewController.m in Sources */,
+				442BF0C41BA2FFC200B34999 /* XKAddTagViewController.m in Sources */,
 				447D08981B95BD1700414080 /* XKFriendTrendsViewController.m in Sources */,
 				449D44571BA116DC007833D5 /* XKPlaceholderTextView.m in Sources */,
 				447D089D1B95BD1700414080 /* main.m in Sources */,

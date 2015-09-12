@@ -7,14 +7,30 @@
 //  登录页面
 
 #import "XKLoginRegisterViewController.h"
+#import "XKLoginRegisterTextField.h"
 
 @interface XKLoginRegisterViewController ()
 // 登录界面 左边约束
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftSpace;
+@property (weak, nonatomic) IBOutlet XKLoginRegisterTextField *nameTextField;
+@property (weak, nonatomic) IBOutlet XKLoginRegisterTextField *pwdTextField;
 
 @end
 
 @implementation XKLoginRegisterViewController
+
+- (IBAction)login
+{
+    NSString *name = self.nameTextField.text;
+    NSString *pwd = self.pwdTextField.text;
+    
+    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+    [userDef removeObjectForKey:@"name"];
+    [userDef removeObjectForKey:@"pwd"];
+    [userDef setObject:name forKey:@"name"];
+    [userDef setObject:pwd forKey:@"pwd"];
+    [userDef synchronize];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

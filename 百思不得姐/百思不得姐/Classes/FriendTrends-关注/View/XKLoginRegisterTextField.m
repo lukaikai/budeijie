@@ -9,7 +9,7 @@
 #import "XKLoginRegisterTextField.h"
 
 // 占位文字颜色Key
-#define XKPlaceholderColorKey @"placeholderLabel.textColor"
+//#define XKPlaceholderColorKey @"placeholderLabel.textColor"
 // 默认的占位文字颜色
 #define XKPlaceholderDefaultColor [UIColor grayColor]
 // 聚焦的占位文字颜色
@@ -29,7 +29,8 @@
     self.textColor = XKPlaceholderFocusColor;
     
     // 占位文字颜色 (最终)
-    [self resignFirstResponder];
+//    [self resignFirstResponder];
+    self.placeholderColor = XKPlaceholderDefaultColor;
     
     // 占位文字颜色（第一种方法）
 //    self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName : [UIColor grayColor]}];
@@ -53,12 +54,14 @@
 // 编辑状态下placeholderLabel文字颜色 最终方案
 - (BOOL)becomeFirstResponder
 {
-    [self setValue:XKPlaceholderFocusColor forKeyPath:XKPlaceholderColorKey];
+//    [self setValue:XKPlaceholderFocusColor forKeyPath:XKPlaceholderColorKey];
+    self.placeholderColor = XKPlaceholderFocusColor;
     return [super becomeFirstResponder];
 }
 - (BOOL)resignFirstResponder
 {
-    [self setValue:XKPlaceholderDefaultColor forKeyPath:XKPlaceholderColorKey];
+//    [self setValue:XKPlaceholderDefaultColor forKeyPath:XKPlaceholderColorKey];
+    self.placeholderColor = XKPlaceholderDefaultColor;
     return [super resignFirstResponder];
 }
 //- (void)dealloc

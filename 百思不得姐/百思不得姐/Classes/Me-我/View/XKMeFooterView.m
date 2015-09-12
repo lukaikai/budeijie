@@ -12,6 +12,7 @@
 #import <MJExtension.h>
 #import "XKSquareButton.h"
 #import "XKWebViewController.h"
+
 @implementation XKMeFooterView
 
 - (instancetype)initWithFrame:(CGRect)frame

@@ -17,4 +17,6 @@
 @property (nonatomic, assign) CGFloat centerX;
 @property (nonatomic, assign) CGFloat centerY;
 
++ (instancetype)viewFromNib;
+
 @end

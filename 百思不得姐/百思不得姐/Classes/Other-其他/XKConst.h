@@ -11,3 +11,11 @@
 UIKIT_EXTERN NSString * const XKRequestURL;
 /** 统一的间距 */
 UIKIT_EXTERN CGFloat const XKCommonMargin;
+/** 统一较小的间距 */
+UIKIT_EXTERN CGFloat const XKCommonSmallMargin;
+
+/** 导航栏最大的Y值 */
+UIKIT_EXTERN CGFloat const XKNavBarMaxY;
+
+/** 标签的高度 */
+UIKIT_EXTERN CGFloat const XKTagH;
