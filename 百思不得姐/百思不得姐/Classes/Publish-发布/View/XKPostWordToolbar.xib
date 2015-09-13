@@ -46,8 +46,8 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kV-or-1Xb">
-                    <rect key="frame" x="0.0" y="0.0" width="491" height="44"/>
-                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="5" y="0.0" width="481" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="lod-Oj-rjf"/>
                     </constraints>
@@ -55,17 +55,19 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="4kV-or-1Xb" secondAttribute="trailing" id="1RI-6g-jh2"/>
+                <constraint firstAttribute="trailing" secondItem="4kV-or-1Xb" secondAttribute="trailing" constant="5" id="1RI-6g-jh2"/>
                 <constraint firstAttribute="trailing" secondItem="1Ql-8k-xT8" secondAttribute="trailing" id="BeB-C6-nj7"/>
                 <constraint firstItem="4kV-or-1Xb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DQ9-zX-q1C"/>
                 <constraint firstAttribute="bottom" secondItem="1Ql-8k-xT8" secondAttribute="bottom" id="GeN-ov-lRB"/>
                 <constraint firstItem="1Ql-8k-xT8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cgB-8g-g6U"/>
-                <constraint firstItem="4kV-or-1Xb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="i77-GQ-OJK"/>
+                <constraint firstItem="4kV-or-1Xb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="i77-GQ-OJK"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="bottomView" destination="1Ql-8k-xT8" id="89c-iF-wFA"/>
                 <outlet property="topView" destination="4kV-or-1Xb" id="AOu-C7-kJk"/>
+                <outlet property="topViewHeight" destination="lod-Oj-rjf" id="bSn-ma-kMt"/>
             </connections>
             <point key="canvasLocation" x="283.5" y="247.5"/>
         </view>

@@ -47,6 +47,7 @@
 {
     XKPostWordToolbar *toolbar = [XKPostWordToolbar viewFromNib];
     toolbar.x = 0;
+    toolbar.width = XKScreenW;
     toolbar.y = XKScreenH - toolbar.height;
     [self.view addSubview:toolbar];
     self.toolbar = toolbar;

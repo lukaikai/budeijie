@@ -54,12 +54,21 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupNav];
-    
+    // 设置装文本框 按钮等得容器
     [self setupContentView];
-    
+    // 设置文本框
     [self setupTextField];
+    // 设置默认标签按钮
+    [self setupTagsButton];
 }
 
+- (void)setupTagsButton
+{
+    for (NSString *tag in self.tags) {
+        self.textF.text = tag;
+        [self tipClick];
+    }
+}
 - (void)setupNav
 {
     self.title = @"添加标签";
@@ -110,7 +119,13 @@
 }
 - (void)done
 {
+    // 将self.tagButtons中存放的所有对象的currentTitle属性值取出来，放到一个新的数组中，并返回
+    NSArray *tags = [self.tagButtons valueForKeyPath:@"currentTitle"];
+    // 将数据放入block 传递出去
+    !self.getTagsBlock ? : self.getTagsBlock(tags);
     
+    // 关闭控制器
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)textDidChange
 {
