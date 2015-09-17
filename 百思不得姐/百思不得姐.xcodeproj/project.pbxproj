@@ -13,16 +13,28 @@
 		442BF0C11BA2F9E700B34999 /* UITextField+XKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 442BF0C01BA2F9E700B34999 /* UITextField+XKExtension.m */; };
 		442BF0C41BA2FFC200B34999 /* XKAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442BF0C31BA2FFC200B34999 /* XKAddTagViewController.m */; };
 		442BF0C71BA3311400B34999 /* XKTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 442BF0C61BA3311400B34999 /* XKTagButton.m */; };
+		444AFAC11BA6EF6A00F3570F /* XKTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 444AFAC01BA6EF6A00F3570F /* XKTopic.m */; };
+		444AFAC51BA712D200F3570F /* XKTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 444AFAC31BA712D200F3570F /* XKTopicCell.m */; };
+		444AFAC61BA712D200F3570F /* XKTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 444AFAC41BA712D200F3570F /* XKTopicCell.xib */; };
 		444D7CD81B9DA506007EF7D4 /* XKMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D7CD71B9DA506007EF7D4 /* XKMeCell.m */; };
 		444D7CDB1B9DAE67007EF7D4 /* XKMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D7CDA1B9DAE67007EF7D4 /* XKMeFooterView.m */; };
 		444D7CDE1B9DB1DE007EF7D4 /* XKSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D7CDD1B9DB1DE007EF7D4 /* XKSquare.m */; };
 		444D7CE11B9DBA35007EF7D4 /* XKSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D7CE01B9DBA35007EF7D4 /* XKSquareButton.m */; };
 		444D7CE51B9DDFF3007EF7D4 /* XKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D7CE31B9DDFF3007EF7D4 /* XKWebViewController.m */; };
 		444D7CE61B9DDFF3007EF7D4 /* XKWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 444D7CE41B9DDFF3007EF7D4 /* XKWebViewController.xib */; };
+		4458F6521BA7C5B300A20FCF /* NSDate+XKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4458F6511BA7C5B300A20FCF /* NSDate+XKExtension.m */; };
+		4461724D1BAAD4EB00B22855 /* XKSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4461724B1BAAD4EB00B22855 /* XKSeeBigPictureViewController.m */; };
+		4461724E1BAAD4EB00B22855 /* XKSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4461724C1BAAD4EB00B22855 /* XKSeeBigPictureViewController.xib */; };
+		446172511BAB110000B22855 /* XKTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 446172501BAB110000B22855 /* XKTopicVoiceView.m */; };
+		446172531BAB112100B22855 /* XKTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446172521BAB112100B22855 /* XKTopicVoiceView.xib */; };
+		446172561BAB18EB00B22855 /* XKTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 446172551BAB18EB00B22855 /* XKTopicVideoView.m */; };
+		446172581BAB191500B22855 /* XKTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446172571BAB191500B22855 /* XKTopicVideoView.xib */; };
 		4469D0A01BA0471D0008008F /* XKPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4469D09E1BA0471D0008008F /* XKPublishViewController.m */; };
 		4469D0A11BA0471D0008008F /* XKPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4469D09F1BA0471D0008008F /* XKPublishViewController.xib */; };
 		4469D0A41BA04AE70008008F /* XKPublishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4469D0A31BA04AE70008008F /* XKPublishButton.m */; };
 		4469D0A71BA07D420008008F /* XKPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4469D0A61BA07D420008008F /* XKPostWordViewController.m */; };
+		44772F521BA994EA00A825C8 /* XKTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44772F511BA994EA00A825C8 /* XKTopicPictureView.m */; };
+		44772F541BA9950000A825C8 /* XKTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44772F531BA9950000A825C8 /* XKTopicPictureView.xib */; };
 		447D085A1B95B48300414080 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08591B95B48300414080 /* _____Tests.m */; };
 		447D08641B95B76500414080 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447D08631B95B76500414080 /* Images.xcassets */; };
 		447D08971B95BD1700414080 /* XKEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08781B95BD1700414080 /* XKEssenceViewController.m */; };
@@ -35,6 +47,12 @@
 		447D08A61B95E31300414080 /* UIBarButtonItem+XK.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08A51B95E31300414080 /* UIBarButtonItem+XK.m */; };
 		447D08A91B95EC8800414080 /* XKSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08A81B95EC8800414080 /* XKSettingViewController.m */; };
 		447D08AC1B95F37A00414080 /* XKTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447D08AB1B95F37A00414080 /* XKTagViewController.m */; };
+		448FBFA31BA5BF7B00C99FC0 /* XKTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 448FBFA21BA5BF7B00C99FC0 /* XKTitleButton.m */; };
+		448FBFA61BA5C99700C99FC0 /* XKAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448FBFA51BA5C99700C99FC0 /* XKAllViewController.m */; };
+		448FBFA91BA5C9BC00C99FC0 /* XKVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448FBFA81BA5C9BC00C99FC0 /* XKVideoViewController.m */; };
+		448FBFAC1BA5C9D200C99FC0 /* XKVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448FBFAB1BA5C9D200C99FC0 /* XKVoiceViewController.m */; };
+		448FBFAF1BA5C9EA00C99FC0 /* XKPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448FBFAE1BA5C9EA00C99FC0 /* XKPictureViewController.m */; };
+		448FBFB21BA5CA0100C99FC0 /* XKWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448FBFB11BA5CA0100C99FC0 /* XKWordViewController.m */; };
 		449D44571BA116DC007833D5 /* XKPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D44561BA116DC007833D5 /* XKPlaceholderTextView.m */; };
 		44B034C01B9C517800AB814F /* XKTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B034BE1B9C517800AB814F /* XKTagCell.m */; };
 		44B034C11B9C517800AB814F /* XKTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44B034BF1B9C517800AB814F /* XKTagCell.xib */; };
@@ -79,6 +97,11 @@
 		442BF0C31BA2FFC200B34999 /* XKAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKAddTagViewController.m; sourceTree = "<group>"; };
 		442BF0C51BA3311400B34999 /* XKTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTagButton.h; sourceTree = "<group>"; };
 		442BF0C61BA3311400B34999 /* XKTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTagButton.m; sourceTree = "<group>"; };
+		444AFABF1BA6EF6A00F3570F /* XKTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTopic.h; sourceTree = "<group>"; };
+		444AFAC01BA6EF6A00F3570F /* XKTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTopic.m; sourceTree = "<group>"; };
+		444AFAC21BA712D200F3570F /* XKTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTopicCell.h; sourceTree = "<group>"; };
+		444AFAC31BA712D200F3570F /* XKTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTopicCell.m; sourceTree = "<group>"; };
+		444AFAC41BA712D200F3570F /* XKTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKTopicCell.xib; sourceTree = "<group>"; };
 		444D7CD61B9DA506007EF7D4 /* XKMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKMeCell.h; sourceTree = "<group>"; };
 		444D7CD71B9DA506007EF7D4 /* XKMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKMeCell.m; sourceTree = "<group>"; };
 		444D7CD91B9DAE67007EF7D4 /* XKMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKMeFooterView.h; sourceTree = "<group>"; };
@@ -90,6 +113,17 @@
 		444D7CE21B9DDFF3007EF7D4 /* XKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKWebViewController.h; sourceTree = "<group>"; };
 		444D7CE31B9DDFF3007EF7D4 /* XKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKWebViewController.m; sourceTree = "<group>"; };
 		444D7CE41B9DDFF3007EF7D4 /* XKWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKWebViewController.xib; sourceTree = "<group>"; };
+		4458F6501BA7C5B300A20FCF /* NSDate+XKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+XKExtension.h"; sourceTree = "<group>"; };
+		4458F6511BA7C5B300A20FCF /* NSDate+XKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XKExtension.m"; sourceTree = "<group>"; };
+		4461724A1BAAD4EA00B22855 /* XKSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKSeeBigPictureViewController.h; sourceTree = "<group>"; };
+		4461724B1BAAD4EB00B22855 /* XKSeeBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKSeeBigPictureViewController.m; sourceTree = "<group>"; };
+		4461724C1BAAD4EB00B22855 /* XKSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKSeeBigPictureViewController.xib; sourceTree = "<group>"; };
+		4461724F1BAB110000B22855 /* XKTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTopicVoiceView.h; sourceTree = "<group>"; };
+		446172501BAB110000B22855 /* XKTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTopicVoiceView.m; sourceTree = "<group>"; };
+		446172521BAB112100B22855 /* XKTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKTopicVoiceView.xib; sourceTree = "<group>"; };
+		446172541BAB18EB00B22855 /* XKTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTopicVideoView.h; sourceTree = "<group>"; };
+		446172551BAB18EB00B22855 /* XKTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTopicVideoView.m; sourceTree = "<group>"; };
+		446172571BAB191500B22855 /* XKTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKTopicVideoView.xib; sourceTree = "<group>"; };
 		4469D09D1BA0471D0008008F /* XKPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKPublishViewController.h; sourceTree = "<group>"; };
 		4469D09E1BA0471D0008008F /* XKPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKPublishViewController.m; sourceTree = "<group>"; };
 		4469D09F1BA0471D0008008F /* XKPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKPublishViewController.xib; sourceTree = "<group>"; };
@@ -97,6 +131,9 @@
 		4469D0A31BA04AE70008008F /* XKPublishButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKPublishButton.m; sourceTree = "<group>"; };
 		4469D0A51BA07D420008008F /* XKPostWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKPostWordViewController.h; sourceTree = "<group>"; };
 		4469D0A61BA07D420008008F /* XKPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKPostWordViewController.m; sourceTree = "<group>"; };
+		44772F501BA994EA00A825C8 /* XKTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTopicPictureView.h; sourceTree = "<group>"; };
+		44772F511BA994EA00A825C8 /* XKTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTopicPictureView.m; sourceTree = "<group>"; };
+		44772F531BA9950000A825C8 /* XKTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKTopicPictureView.xib; sourceTree = "<group>"; };
 		447D083A1B95B48300414080 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		447D08531B95B48300414080 /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		447D08581B95B48300414080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +158,18 @@
 		447D08A81B95EC8800414080 /* XKSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKSettingViewController.m; sourceTree = "<group>"; };
 		447D08AA1B95F37A00414080 /* XKTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTagViewController.h; sourceTree = "<group>"; };
 		447D08AB1B95F37A00414080 /* XKTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTagViewController.m; sourceTree = "<group>"; };
+		448FBFA11BA5BF7B00C99FC0 /* XKTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTitleButton.h; sourceTree = "<group>"; };
+		448FBFA21BA5BF7B00C99FC0 /* XKTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKTitleButton.m; sourceTree = "<group>"; };
+		448FBFA41BA5C99700C99FC0 /* XKAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKAllViewController.h; sourceTree = "<group>"; };
+		448FBFA51BA5C99700C99FC0 /* XKAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKAllViewController.m; sourceTree = "<group>"; };
+		448FBFA71BA5C9BC00C99FC0 /* XKVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKVideoViewController.h; sourceTree = "<group>"; };
+		448FBFA81BA5C9BC00C99FC0 /* XKVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKVideoViewController.m; sourceTree = "<group>"; };
+		448FBFAA1BA5C9D200C99FC0 /* XKVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKVoiceViewController.h; sourceTree = "<group>"; };
+		448FBFAB1BA5C9D200C99FC0 /* XKVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKVoiceViewController.m; sourceTree = "<group>"; };
+		448FBFAD1BA5C9EA00C99FC0 /* XKPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKPictureViewController.h; sourceTree = "<group>"; };
+		448FBFAE1BA5C9EA00C99FC0 /* XKPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKPictureViewController.m; sourceTree = "<group>"; };
+		448FBFB01BA5CA0100C99FC0 /* XKWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKWordViewController.h; sourceTree = "<group>"; };
+		448FBFB11BA5CA0100C99FC0 /* XKWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKWordViewController.m; sourceTree = "<group>"; };
 		449D44551BA116DC007833D5 /* XKPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKPlaceholderTextView.h; sourceTree = "<group>"; };
 		449D44561BA116DC007833D5 /* XKPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKPlaceholderTextView.m; sourceTree = "<group>"; };
 		44B034BD1B9C517800AB814F /* XKTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKTagCell.h; sourceTree = "<group>"; };
@@ -263,6 +312,19 @@
 				447D08781B95BD1700414080 /* XKEssenceViewController.m */,
 				447D08AA1B95F37A00414080 /* XKTagViewController.h */,
 				447D08AB1B95F37A00414080 /* XKTagViewController.m */,
+				448FBFA41BA5C99700C99FC0 /* XKAllViewController.h */,
+				448FBFA51BA5C99700C99FC0 /* XKAllViewController.m */,
+				448FBFA71BA5C9BC00C99FC0 /* XKVideoViewController.h */,
+				448FBFA81BA5C9BC00C99FC0 /* XKVideoViewController.m */,
+				448FBFAA1BA5C9D200C99FC0 /* XKVoiceViewController.h */,
+				448FBFAB1BA5C9D200C99FC0 /* XKVoiceViewController.m */,
+				448FBFAD1BA5C9EA00C99FC0 /* XKPictureViewController.h */,
+				448FBFAE1BA5C9EA00C99FC0 /* XKPictureViewController.m */,
+				448FBFB01BA5CA0100C99FC0 /* XKWordViewController.h */,
+				448FBFB11BA5CA0100C99FC0 /* XKWordViewController.m */,
+				4461724A1BAAD4EA00B22855 /* XKSeeBigPictureViewController.h */,
+				4461724B1BAAD4EB00B22855 /* XKSeeBigPictureViewController.m */,
+				4461724C1BAAD4EB00B22855 /* XKSeeBigPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,6 +334,8 @@
 			children = (
 				44B034C41B9C565A00AB814F /* XKTag.h */,
 				44B034C51B9C565A00AB814F /* XKTag.m */,
+				444AFABF1BA6EF6A00F3570F /* XKTopic.h */,
+				444AFAC01BA6EF6A00F3570F /* XKTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +346,20 @@
 				44B034BD1B9C517800AB814F /* XKTagCell.h */,
 				44B034BE1B9C517800AB814F /* XKTagCell.m */,
 				44B034BF1B9C517800AB814F /* XKTagCell.xib */,
+				448FBFA11BA5BF7B00C99FC0 /* XKTitleButton.h */,
+				448FBFA21BA5BF7B00C99FC0 /* XKTitleButton.m */,
+				444AFAC21BA712D200F3570F /* XKTopicCell.h */,
+				444AFAC31BA712D200F3570F /* XKTopicCell.m */,
+				444AFAC41BA712D200F3570F /* XKTopicCell.xib */,
+				44772F501BA994EA00A825C8 /* XKTopicPictureView.h */,
+				44772F511BA994EA00A825C8 /* XKTopicPictureView.m */,
+				44772F531BA9950000A825C8 /* XKTopicPictureView.xib */,
+				4461724F1BAB110000B22855 /* XKTopicVoiceView.h */,
+				446172501BAB110000B22855 /* XKTopicVoiceView.m */,
+				446172521BAB112100B22855 /* XKTopicVoiceView.xib */,
+				446172541BAB18EB00B22855 /* XKTopicVideoView.h */,
+				446172551BAB18EB00B22855 /* XKTopicVideoView.m */,
+				446172571BAB191500B22855 /* XKTopicVideoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -483,6 +561,8 @@
 				44BD18A91B9E7C3A00305882 /* NSString+XKExtension.m */,
 				442BF0BF1BA2F9E700B34999 /* UITextField+XKExtension.h */,
 				442BF0C01BA2F9E700B34999 /* UITextField+XKExtension.m */,
+				4458F6501BA7C5B300A20FCF /* NSDate+XKExtension.h */,
+				4458F6511BA7C5B300A20FCF /* NSDate+XKExtension.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -614,14 +694,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				446172531BAB112100B22855 /* XKTopicVoiceView.xib in Resources */,
+				446172581BAB191500B22855 /* XKTopicVideoView.xib in Resources */,
 				444D7CE61B9DDFF3007EF7D4 /* XKWebViewController.xib in Resources */,
 				447D08641B95B76500414080 /* Images.xcassets in Resources */,
 				4469D0A11BA0471D0008008F /* XKPublishViewController.xib in Resources */,
 				447D089C1B95BD1700414080 /* Info.plist in Resources */,
+				4461724E1BAAD4EB00B22855 /* XKSeeBigPictureViewController.xib in Resources */,
 				44B034C11B9C517800AB814F /* XKTagCell.xib in Resources */,
 				44E652971B982852009C3AC9 /* XKLoginRegisterViewController.xib in Resources */,
 				442BF0BB1BA2EB9000B34999 /* XKPostWordToolbar.xib in Resources */,
 				44E6528F1B98220B009C3AC9 /* XKFriendTrendsViewController.xib in Resources */,
+				44772F541BA9950000A825C8 /* XKTopicPictureView.xib in Resources */,
+				444AFAC61BA712D200F3570F /* XKTopicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,18 +758,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				44B034D21B9C7EFC00AB814F /* XKConst.m in Sources */,
+				448FBFA31BA5BF7B00C99FC0 /* XKTitleButton.m in Sources */,
 				44E6529A1B983787009C3AC9 /* XKQuickLoginButton.m in Sources */,
+				448FBFB21BA5CA0100C99FC0 /* XKWordViewController.m in Sources */,
 				442BF0C11BA2F9E700B34999 /* UITextField+XKExtension.m in Sources */,
 				442BF0B91BA2EB7C00B34999 /* XKPostWordToolbar.m in Sources */,
 				44E652961B982852009C3AC9 /* XKLoginRegisterViewController.m in Sources */,
 				44E6528A1B9812F1009C3AC9 /* XKTabBar.m in Sources */,
+				44772F521BA994EA00A825C8 /* XKTopicPictureView.m in Sources */,
 				447D089A1B95BD1700414080 /* XKNewViewController.m in Sources */,
 				441118D71BA3EEF4000A234E /* XKTagTextField.m in Sources */,
 				44B034CC1B9C656E00AB814F /* UIImage+XKExtension.m in Sources */,
 				4469D0A41BA04AE70008008F /* XKPublishButton.m in Sources */,
+				448FBFA61BA5C99700C99FC0 /* XKAllViewController.m in Sources */,
 				444D7CD81B9DA506007EF7D4 /* XKMeCell.m in Sources */,
 				444D7CE11B9DBA35007EF7D4 /* XKSquareButton.m in Sources */,
 				44B034C01B9C517800AB814F /* XKTagCell.m in Sources */,
+				444AFAC11BA6EF6A00F3570F /* XKTopic.m in Sources */,
 				447D08971B95BD1700414080 /* XKEssenceViewController.m in Sources */,
 				447D08AC1B95F37A00414080 /* XKTagViewController.m in Sources */,
 				444D7CDB1B9DAE67007EF7D4 /* XKMeFooterView.m in Sources */,
@@ -692,8 +782,10 @@
 				44B034C31B9C561600AB814F /* NSDictionary+LOG.m in Sources */,
 				442BF0C71BA3311400B34999 /* XKTagButton.m in Sources */,
 				447D08991B95BD1700414080 /* XKMeViewController.m in Sources */,
+				4461724D1BAAD4EB00B22855 /* XKSeeBigPictureViewController.m in Sources */,
 				44B034C61B9C565A00AB814F /* XKTag.m in Sources */,
 				44E652891B9812F1009C3AC9 /* XKTabBarController.m in Sources */,
+				446172511BAB110000B22855 /* XKTopicVoiceView.m in Sources */,
 				44B034CF1B9C688400AB814F /* UIImageView+XKExtension.m in Sources */,
 				44BD18AD1B9E805D00305882 /* XKClearCacheCell.m in Sources */,
 				44E652921B98272C009C3AC9 /* UIView+XKExtension.m in Sources */,
@@ -701,15 +793,21 @@
 				444D7CDE1B9DB1DE007EF7D4 /* XKSquare.m in Sources */,
 				444D7CE51B9DDFF3007EF7D4 /* XKWebViewController.m in Sources */,
 				447D08A61B95E31300414080 /* UIBarButtonItem+XK.m in Sources */,
+				448FBFAF1BA5C9EA00C99FC0 /* XKPictureViewController.m in Sources */,
 				4469D0A71BA07D420008008F /* XKPostWordViewController.m in Sources */,
 				447D08A91B95EC8800414080 /* XKSettingViewController.m in Sources */,
+				444AFAC51BA712D200F3570F /* XKTopicCell.m in Sources */,
+				448FBFA91BA5C9BC00C99FC0 /* XKVideoViewController.m in Sources */,
+				448FBFAC1BA5C9D200C99FC0 /* XKVoiceViewController.m in Sources */,
 				4469D0A01BA0471D0008008F /* XKPublishViewController.m in Sources */,
 				442BF0C41BA2FFC200B34999 /* XKAddTagViewController.m in Sources */,
 				447D08981B95BD1700414080 /* XKFriendTrendsViewController.m in Sources */,
 				449D44571BA116DC007833D5 /* XKPlaceholderTextView.m in Sources */,
 				447D089D1B95BD1700414080 /* main.m in Sources */,
 				447D089B1B95BD1700414080 /* AppDelegate.m in Sources */,
+				4458F6521BA7C5B300A20FCF /* NSDate+XKExtension.m in Sources */,
 				44E6529D1B984BAA009C3AC9 /* XKLoginRegisterTextField.m in Sources */,
+				446172561BAB18EB00B22855 /* XKTopicVideoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

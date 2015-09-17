@@ -20,6 +20,18 @@ CGFloat const XKNavBarMaxY = 64;
 
 /** 标签的高度 */
 CGFloat const XKTagH = 25;
+
+/** 精华titlesView的高度 */
+CGFloat const XKTitlesViewH = 35;
+
+/** UITabBar的高度 */
+CGFloat const XKUITabBarH = 49;
+
+/** 帖子-文字的Y值 */
+CGFloat const XKTopicTextY = 55;
+
+/** 帖子-底部工具条的高度 */
+CGFloat const XKTopicToolbarH = 35;
 /**
  全局常量的写法
  1.仅限于本文件访问

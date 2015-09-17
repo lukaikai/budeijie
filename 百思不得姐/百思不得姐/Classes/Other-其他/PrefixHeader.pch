@@ -16,6 +16,7 @@
 #import "XKConst.h"
 #import "NSString+XKExtension.h"
 #import "UITextField+XKExtension.h"
+#import "NSDate+XKExtension.h"
 // 日志输出
 #ifdef DEBUG // 开发阶段-DEBUG阶段:使用Log
 #define XKLog(...) NSLog(__VA_ARGS__)
@@ -37,4 +38,6 @@
 // 屏幕尺寸
 #define XKScreenH [UIScreen mainScreen].bounds.size.height
 #define XKScreenW [UIScreen mainScreen].bounds.size.width
+// 将数据写到桌面的plist
+#define XKWriteToPlist(data, filename) [data writeToFile:[NSString stringWithFormat:@"/Users/md313/Desktop/%@.plist", filename] atomically:YES];
 #endif

@@ -92,7 +92,12 @@
 {
     [super viewWillAppear:animated];
     [self.textView becomeFirstResponder];
+}
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.textView resignFirstResponder];
 }
 #pragma mark - 监听
 - (void)post

@@ -129,21 +129,20 @@
  */
 - (void)buttonClick:(XKPublishButton *)button
 {
-    NSInteger index = [self.buttons indexOfObject:button];
-    
-    switch (index) {
-        case 2:{
-            [self exit:^{
+    [self exit:^{
+        // 按钮索引
+        NSInteger index = [self.buttons indexOfObject:button];
+        
+        switch (index) {
+            case 2:{
                 XKPostWordViewController *wordVc = [[XKPostWordViewController alloc] init];
-                
                 [self.view.window.rootViewController presentViewController:[[XKNavigationController alloc] initWithRootViewController:wordVc] animated:YES completion:nil];
-            }];
+                break;
+            }
+            default:
+                break;
         }
-            break;
-            
-        default:
-            break;
-    }
+    }];
 }
 /**
  *  取消
