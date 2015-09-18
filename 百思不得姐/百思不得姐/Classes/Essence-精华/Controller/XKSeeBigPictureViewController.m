@@ -43,7 +43,7 @@ static NSString * const XKDefaultGroupName = @"百思不得姐";
     
     // 图片
     UIImageView *imageView = [[UIImageView alloc] init];
-    [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.image1]];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image]];
     [scrollView addSubview:imageView];
     self.imageView = imageView;
     // 图片位置尺寸

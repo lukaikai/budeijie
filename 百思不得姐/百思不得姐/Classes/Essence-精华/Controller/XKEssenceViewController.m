@@ -86,7 +86,7 @@
     // 标签栏
     UIView *titlesView = [[UIView alloc] init];
     titlesView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
-    titlesView.frame = CGRectMake(0, XKNavBarMaxY, XKScreenW, XKTitlesViewH);
+    titlesView.frame = CGRectMake(0, XKNavBarMaxY, self.view.width, XKTitlesViewH);
     [self.view addSubview:titlesView];
     
     // 标签栏里的按钮
@@ -137,7 +137,7 @@
     // 背景颜色
     scrollView.backgroundColor = XKCommonBgColor;
     // 滚动范围
-    scrollView.contentSize = CGSizeMake(self.childViewControllers.count * XKScreenW, 0);
+    scrollView.contentSize = CGSizeMake(self.childViewControllers.count * self.view.width, 0);
     scrollView.delegate = self;
     [self.view addSubview:scrollView];
     self.scrollView = scrollView;
@@ -194,7 +194,7 @@
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
     // 取出对应的控制器
-    int index = scrollView.contentOffset.x / XKScreenW;
+    int index = scrollView.contentOffset.x / scrollView.width;
     UIViewController *willShowVc = self.childViewControllers[index];
     
     // 如果控制器的view已经被创建过，就直接返回
@@ -212,7 +212,7 @@
     [self scrollViewDidEndScrollingAnimation:scrollView];
     
     // 相当于点击对应位置的按钮
-    int index = scrollView.contentOffset.x / XKScreenW;
+    int index = scrollView.contentOffset.x / scrollView.width;
     [self titleClick:self.titleButtons[index]];
 }
 

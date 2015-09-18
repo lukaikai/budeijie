@@ -61,6 +61,13 @@
 		44B034CC1B9C656E00AB814F /* UIImage+XKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B034CB1B9C656E00AB814F /* UIImage+XKExtension.m */; };
 		44B034CF1B9C688400AB814F /* UIImageView+XKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B034CE1B9C688400AB814F /* UIImageView+XKExtension.m */; };
 		44B034D21B9C7EFC00AB814F /* XKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B034D11B9C7EFC00AB814F /* XKConst.m */; };
+		44BC0A331BABAB3F006CB9BD /* XKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 44BC0A321BABAB3E006CB9BD /* XKUser.m */; };
+		44BC0A361BABAE85006CB9BD /* XKComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 44BC0A351BABAE85006CB9BD /* XKComment.m */; };
+		44BC0A3A1BABC022006CB9BD /* XKCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44BC0A381BABC022006CB9BD /* XKCommentViewController.m */; };
+		44BC0A3B1BABC022006CB9BD /* XKCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BC0A391BABC022006CB9BD /* XKCommentViewController.xib */; };
+		44BC0A3F1BABF956006CB9BD /* XKCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44BC0A3D1BABF956006CB9BD /* XKCommentCell.m */; };
+		44BC0A401BABF956006CB9BD /* XKCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BC0A3E1BABF956006CB9BD /* XKCommentCell.xib */; };
+		44BC0A431BAC2132006CB9BD /* XKCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44BC0A421BAC2132006CB9BD /* XKCommentHeaderView.m */; };
 		44BD18AA1B9E7C3A00305882 /* NSString+XKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 44BD18A91B9E7C3A00305882 /* NSString+XKExtension.m */; };
 		44BD18AD1B9E805D00305882 /* XKClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44BD18AC1B9E805D00305882 /* XKClearCacheCell.m */; };
 		44E652891B9812F1009C3AC9 /* XKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E652841B9812F1009C3AC9 /* XKTabBarController.m */; };
@@ -184,6 +191,18 @@
 		44B034CE1B9C688400AB814F /* UIImageView+XKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XKExtension.m"; sourceTree = "<group>"; };
 		44B034D01B9C7EFC00AB814F /* XKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKConst.h; sourceTree = "<group>"; };
 		44B034D11B9C7EFC00AB814F /* XKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKConst.m; sourceTree = "<group>"; };
+		44BC0A311BABAB3E006CB9BD /* XKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKUser.h; sourceTree = "<group>"; };
+		44BC0A321BABAB3E006CB9BD /* XKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKUser.m; sourceTree = "<group>"; };
+		44BC0A341BABAE85006CB9BD /* XKComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKComment.h; sourceTree = "<group>"; };
+		44BC0A351BABAE85006CB9BD /* XKComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKComment.m; sourceTree = "<group>"; };
+		44BC0A371BABC022006CB9BD /* XKCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKCommentViewController.h; sourceTree = "<group>"; };
+		44BC0A381BABC022006CB9BD /* XKCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKCommentViewController.m; sourceTree = "<group>"; };
+		44BC0A391BABC022006CB9BD /* XKCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKCommentViewController.xib; sourceTree = "<group>"; };
+		44BC0A3C1BABF956006CB9BD /* XKCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKCommentCell.h; sourceTree = "<group>"; };
+		44BC0A3D1BABF956006CB9BD /* XKCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKCommentCell.m; sourceTree = "<group>"; };
+		44BC0A3E1BABF956006CB9BD /* XKCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XKCommentCell.xib; sourceTree = "<group>"; };
+		44BC0A411BAC2132006CB9BD /* XKCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKCommentHeaderView.h; sourceTree = "<group>"; };
+		44BC0A421BAC2132006CB9BD /* XKCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKCommentHeaderView.m; sourceTree = "<group>"; };
 		44BD18A81B9E7C3A00305882 /* NSString+XKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XKExtension.h"; sourceTree = "<group>"; };
 		44BD18A91B9E7C3A00305882 /* NSString+XKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XKExtension.m"; sourceTree = "<group>"; };
 		44BD18AB1B9E805D00305882 /* XKClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKClearCacheCell.h; sourceTree = "<group>"; };
@@ -325,6 +344,9 @@
 				4461724A1BAAD4EA00B22855 /* XKSeeBigPictureViewController.h */,
 				4461724B1BAAD4EB00B22855 /* XKSeeBigPictureViewController.m */,
 				4461724C1BAAD4EB00B22855 /* XKSeeBigPictureViewController.xib */,
+				44BC0A371BABC022006CB9BD /* XKCommentViewController.h */,
+				44BC0A381BABC022006CB9BD /* XKCommentViewController.m */,
+				44BC0A391BABC022006CB9BD /* XKCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -336,6 +358,10 @@
 				44B034C51B9C565A00AB814F /* XKTag.m */,
 				444AFABF1BA6EF6A00F3570F /* XKTopic.h */,
 				444AFAC01BA6EF6A00F3570F /* XKTopic.m */,
+				44BC0A311BABAB3E006CB9BD /* XKUser.h */,
+				44BC0A321BABAB3E006CB9BD /* XKUser.m */,
+				44BC0A341BABAE85006CB9BD /* XKComment.h */,
+				44BC0A351BABAE85006CB9BD /* XKComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -360,6 +386,11 @@
 				446172541BAB18EB00B22855 /* XKTopicVideoView.h */,
 				446172551BAB18EB00B22855 /* XKTopicVideoView.m */,
 				446172571BAB191500B22855 /* XKTopicVideoView.xib */,
+				44BC0A3C1BABF956006CB9BD /* XKCommentCell.h */,
+				44BC0A3D1BABF956006CB9BD /* XKCommentCell.m */,
+				44BC0A3E1BABF956006CB9BD /* XKCommentCell.xib */,
+				44BC0A411BAC2132006CB9BD /* XKCommentHeaderView.h */,
+				44BC0A421BAC2132006CB9BD /* XKCommentHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -699,8 +730,10 @@
 				444D7CE61B9DDFF3007EF7D4 /* XKWebViewController.xib in Resources */,
 				447D08641B95B76500414080 /* Images.xcassets in Resources */,
 				4469D0A11BA0471D0008008F /* XKPublishViewController.xib in Resources */,
+				44BC0A3B1BABC022006CB9BD /* XKCommentViewController.xib in Resources */,
 				447D089C1B95BD1700414080 /* Info.plist in Resources */,
 				4461724E1BAAD4EB00B22855 /* XKSeeBigPictureViewController.xib in Resources */,
+				44BC0A401BABF956006CB9BD /* XKCommentCell.xib in Resources */,
 				44B034C11B9C517800AB814F /* XKTagCell.xib in Resources */,
 				44E652971B982852009C3AC9 /* XKLoginRegisterViewController.xib in Resources */,
 				442BF0BB1BA2EB9000B34999 /* XKPostWordToolbar.xib in Resources */,
@@ -783,9 +816,13 @@
 				442BF0C71BA3311400B34999 /* XKTagButton.m in Sources */,
 				447D08991B95BD1700414080 /* XKMeViewController.m in Sources */,
 				4461724D1BAAD4EB00B22855 /* XKSeeBigPictureViewController.m in Sources */,
+				44BC0A431BAC2132006CB9BD /* XKCommentHeaderView.m in Sources */,
 				44B034C61B9C565A00AB814F /* XKTag.m in Sources */,
 				44E652891B9812F1009C3AC9 /* XKTabBarController.m in Sources */,
 				446172511BAB110000B22855 /* XKTopicVoiceView.m in Sources */,
+				44BC0A3A1BABC022006CB9BD /* XKCommentViewController.m in Sources */,
+				44BC0A3F1BABF956006CB9BD /* XKCommentCell.m in Sources */,
+				44BC0A361BABAE85006CB9BD /* XKComment.m in Sources */,
 				44B034CF1B9C688400AB814F /* UIImageView+XKExtension.m in Sources */,
 				44BD18AD1B9E805D00305882 /* XKClearCacheCell.m in Sources */,
 				44E652921B98272C009C3AC9 /* UIView+XKExtension.m in Sources */,
@@ -802,6 +839,7 @@
 				4469D0A01BA0471D0008008F /* XKPublishViewController.m in Sources */,
 				442BF0C41BA2FFC200B34999 /* XKAddTagViewController.m in Sources */,
 				447D08981B95BD1700414080 /* XKFriendTrendsViewController.m in Sources */,
+				44BC0A331BABAB3F006CB9BD /* XKUser.m in Sources */,
 				449D44571BA116DC007833D5 /* XKPlaceholderTextView.m in Sources */,
 				447D089D1B95BD1700414080 /* main.m in Sources */,
 				447D089B1B95BD1700414080 /* AppDelegate.m in Sources */,

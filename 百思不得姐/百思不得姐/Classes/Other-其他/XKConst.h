@@ -33,3 +33,11 @@ UIKIT_EXTERN CGFloat const XKTopicTextY;
 
 /** 帖子-底部工具条的高度 */
 UIKIT_EXTERN CGFloat const XKTopicToolbarH;
+
+/** 帖子-最热评论顶部高度 */
+UIKIT_EXTERN CGFloat const XKTopicTopCmtTopH;
+
+/** 性别男 */
+UIKIT_EXTERN NSString * const XKUserSexMale;
+/** 性别女 */
+UIKIT_EXTERN NSString * const XKUserSexFemale;

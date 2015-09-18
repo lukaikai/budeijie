@@ -81,8 +81,8 @@
     UIView *contenView = [[UIView alloc] init];
     contenView.x = XKCommonSmallMargin;
     contenView.y = XKNavBarMaxY + XKCommonSmallMargin;
-    contenView.width = XKScreenW - 2 * contenView.x;
-    contenView.height = XKScreenH;
+    contenView.width = self.view.width - 2 * contenView.x;
+    contenView.height = self.view.height;
     self.contentView = contenView;
     [self.view addSubview:contenView];
 }

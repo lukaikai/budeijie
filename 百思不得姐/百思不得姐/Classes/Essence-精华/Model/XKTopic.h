@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "XKComment.h"
 typedef enum {
     XKTopicTypePicture = 10, // 图片
     XKTopicTypeWord = 29, // 段子(文字)
@@ -40,17 +40,23 @@ typedef enum {
 /** 图片的宽度 */
 @property(nonatomic, assign) CGFloat width;
 /** 小图 */
-@property(nonatomic, copy) NSString *image0;
+@property(nonatomic, copy) NSString *small_image; //image0
 /** 大图 */
-@property(nonatomic, copy) NSString *image1;
+@property(nonatomic, copy) NSString *large_image; // image1
 /** 中图 */
-@property(nonatomic, copy) NSString *image2;
+@property(nonatomic, copy) NSString *middle_image; // image2
 /** 是否是gif图片 */
 @property(nonatomic, assign) BOOL is_gif;
 /** 视频时长 */
 @property(nonatomic, assign) NSInteger videotime;
 /** 播放次数 */
 @property(nonatomic, assign) NSInteger playcount;
+/** id */
+@property(nonatomic, copy) NSString *ID; // id
+/** 最热评论 存放XKComment模型*/
+@property(nonatomic,strong) XKComment *topComment;
+
+
 
 /** 辅助属性 */
 @property(nonatomic, assign) CGFloat topicCellH;

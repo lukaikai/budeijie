@@ -11,6 +11,8 @@
 #import "XKTopicPictureView.h"
 #import "XKTopicVoiceView.h"
 #import "XKTopicVideoView.h"
+#import "XKComment.h"
+#import "XKUser.h"
 @interface XKTopicCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -21,6 +23,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiBtn;
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
+/** 最热评论整体 */
+@property (weak, nonatomic) IBOutlet UIView *topComView;
+/** 最热评论内容 */
+@property (weak, nonatomic) IBOutlet UILabel *topComLabel;
 
 @property (weak, nonatomic) XKTopicPictureView *pictureView;
 @property (weak, nonatomic) XKTopicVoiceView *voiceView;
@@ -59,7 +65,6 @@
 {
     // cell的背景图片
     self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
-    // 
 }
 - (void)setTopic:(XKTopic *)topic
 {
@@ -98,6 +103,16 @@
         self.voiceView.hidden = YES;
         self.videoView.hidden = YES;
     }
+    
+    // 最热评论
+    if (topic.topComment) {
+        self.topComView.hidden = NO;
+        NSString *userName = topic.topComment.user.username;
+        NSString *content = topic.topComment.content;
+        self.topComLabel.text = [NSString stringWithFormat:@"%@ : %@",userName,content];
+    }else{
+        self.topComView.hidden = YES;
+    }
 }
 /**
  * 设置工具条按钮的文字
@@ -119,7 +134,7 @@
     [super setFrame:frame];
 }
 /**
- *  又上角按钮功能
+ *  右上角按钮功能
  */
 - (IBAction)cellMoreClick
 {

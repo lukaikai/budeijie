@@ -12,6 +12,7 @@
 #import <MJExtension.h>
 #import "XKTopic.h"
 #import "XKTopicCell.h"
+#import "XKCommentViewController.h"
 
 @interface XKAllViewController ()
 
@@ -145,5 +146,12 @@ static NSString * const XKTopicCellID = @"topic";
 {
     XKTopic *topic = self.topics[indexPath.row];
     return topic.topicCellH;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    XKCommentViewController *commentVc = [[XKCommentViewController alloc] init];
+    commentVc.topic = self.topics[indexPath.row];
+    [self.navigationController pushViewController:commentVc animated:YES];
 }
 @end

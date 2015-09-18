@@ -49,7 +49,7 @@
 {
     _topic = topic;
     XKWeakSelf
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.image1] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         // 进度条
         weakSelf.progressView.hidden = NO;
         weakSelf.progressView.progress = 1.0 * receivedSize / expectedSize;

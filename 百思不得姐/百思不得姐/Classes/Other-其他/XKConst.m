@@ -32,6 +32,13 @@ CGFloat const XKTopicTextY = 55;
 
 /** 帖子-底部工具条的高度 */
 CGFloat const XKTopicToolbarH = 35;
+/** 帖子-最热评论顶部高度 */
+CGFloat const XKTopicTopCmtTopH = 18;
+
+/** 性别男 */
+NSString * const XKUserSexMale = @"m";
+/** 性别女 */
+NSString * const XKUserSexFemale = @"f";
 /**
  全局常量的写法
  1.仅限于本文件访问

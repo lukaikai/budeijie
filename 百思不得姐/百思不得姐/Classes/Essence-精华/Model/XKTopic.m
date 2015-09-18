@@ -7,9 +7,27 @@
 //
 
 #import "XKTopic.h"
-
+#import <MJExtension.h>
+#import "XKComment.h"
+#import "XKUser.h"
 @implementation XKTopic
 
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{
+             @"ID" : @"id",
+             @"large_image" : @"image1",
+             @"middle_image" : @"image2",
+             @"small_image" : @"image0",
+             @"topComment" : @"top_cmt[0]"
+             };
+}
++ (NSDictionary *)objectClassInArray
+{
+    return @{
+             @"users" : @"XKUser"
+             };
+}
 - (NSString *)created_at
 {
     // 日期格式化
@@ -67,8 +85,23 @@
             _topicCellH += pictureH + XKCommonMargin;
         }
         
+        // 最热评论
+        if (self.topComment) {
+            NSString *userName = self.topComment.user.username;
+            NSString *content = self.topComment.content;
+            NSString *cmtText = [NSString stringWithFormat:@"%@ : %@",userName,content];
+            
+            // 评论文字高度
+            CGFloat cmtTextH = [cmtText boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+            
+            _topicCellH += XKTopicTopCmtTopH + cmtTextH + XKCommonMargin;
+        }
+        
+        // 工具条的高度
         _topicCellH += XKTopicToolbarH + XKCommonMargin;
+        
     }
+    
     return _topicCellH;
 }
 @end
