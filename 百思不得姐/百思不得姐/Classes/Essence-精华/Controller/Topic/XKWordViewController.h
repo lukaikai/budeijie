@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 xiaokai. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XKTopicViewController.h"
 
-@interface XKWordViewController : UITableViewController
+@interface XKWordViewController : XKTopicViewController
 
 @end

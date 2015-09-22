@@ -18,5 +18,8 @@
 @property (nonatomic, assign) CGFloat centerY;
 
 + (instancetype)viewFromNib;
-
+/**
+ * 判断一个控件是否真正显示在主窗口
+ */
+- (BOOL)isShowingOnKeyWindow;
 @end

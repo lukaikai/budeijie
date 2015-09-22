@@ -41,3 +41,6 @@ UIKIT_EXTERN CGFloat const XKTopicTopCmtTopH;
 UIKIT_EXTERN NSString * const XKUserSexMale;
 /** 性别女 */
 UIKIT_EXTERN NSString * const XKUserSexFemale;
+
+/** tabBar被选中的通知名字 */
+UIKIT_EXTERN NSString * const XKTabBarDidSelectNotification;

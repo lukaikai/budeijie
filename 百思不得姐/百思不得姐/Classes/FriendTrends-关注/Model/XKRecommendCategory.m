@@ -1,14 +1,15 @@
 //
-//  XKComment.m
+//  XKRecommendCategory.m
 //  百思不得姐
 //
-//  Created by MD313  on 15/9/18.
+//  Created by MD313  on 15/9/20.
 //  Copyright (c) 2015年 xiaokai. All rights reserved.
 //
 
-#import "XKComment.h"
+#import "XKRecommendCategory.h"
 #import <MJExtension.h>
-@implementation XKComment
+@implementation XKRecommendCategory
+
 + (NSDictionary *)replacedKeyFromPropertyName
 {
     return @{

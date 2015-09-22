@@ -15,6 +15,7 @@
 #import <MJRefresh.h>
 #import "XKComment.h"
 #import "XKCommentHeaderView.h"
+#import "XKUser.h"
 @interface XKCommentViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpace;
@@ -122,11 +123,14 @@ static NSString * const XKCommentHeaderId = @"CommentHeader";
         // 全部评论
         weakSelf.comments = [XKComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
         // 刷新表格
-        [self.tableView reloadData];
-        // 结束刷新
+        [weakSelf.tableView reloadData];
+        // 判断评论数据是否已经加载完全
+        if (weakSelf.comments.count >= [responseObject[@"total"] intValue]) { // 已经加载完了
+            [weakSelf.tableView.footer noticeNoMoreData];
+        }
         [weakSelf.tableView.header endRefreshing];
     } failure:^(NSURLSessionDataTask *task, NSError * error) {
-        [self.tableView.header endRefreshing];
+        [weakSelf.tableView.header endRefreshing];
     }];
 }
 
@@ -136,23 +140,28 @@ static NSString * const XKCommentHeaderId = @"CommentHeader";
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     // 请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    XKComment *lastComment = self.comments.lastObject;
     params[@"a"] = @"dataList";
     params[@"c"] = @"comment";
     params[@"data_id"] = self.topic.ID;
-    params[@"hot"] = @1;
+    params[@"lastcid"] = lastComment.ID;
     // 请求数据
     XKWeakSelf
     [self.manager GET:XKRequestURL parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
-        // 最热评论
-        weakSelf.hotComments = [XKComment objectArrayWithKeyValuesArray:responseObject[@"hot"]];
-        // 全部评论
-        weakSelf.comments = [XKComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        // 新加载的评论
+        NSArray *newComments = [XKComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        [weakSelf.comments addObjectsFromArray:newComments];
         // 刷新表格
-        [self.tableView reloadData];
-        // 结束刷新
-        [weakSelf.tableView.header endRefreshing];
+        [weakSelf.tableView reloadData];
+        // 判断评论数据是否已经加载完全
+        if (weakSelf.comments.count >= [responseObject[@"total"] intValue]) {
+            [weakSelf.tableView.footer noticeNoMoreData];
+        }else{
+            // 结束刷新
+            [weakSelf.tableView.footer endRefreshing];
+        }
     } failure:^(NSURLSessionDataTask *task, NSError * error) {
-        [self.tableView.header endRefreshing];
+        [weakSelf.tableView.footer endRefreshing];
     }];
 }
 #pragma mark - 监听
@@ -198,6 +207,78 @@ static NSString * const XKCommentHeaderId = @"CommentHeader";
     [self.view endEditing:YES];
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    XKCommentHeaderView *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:XKCommentHeaderId];
+    if (section == 0 && self.hotComments.count) {
+        header.text = @"最热评论";
+    }else{
+        header.text = @"最新评论";
+    }
+    return header;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    // 菜单
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    // 菜单内容
+    menu.menuItems = @[
+                       [[UIMenuItem alloc] initWithTitle:@"顶" action:@selector(ding:)],
+                       [[UIMenuItem alloc] initWithTitle:@"回复" action:@selector(reply:)],
+                       [[UIMenuItem alloc] initWithTitle:@"举报" action:@selector(warn:)]
+                       ];
+    // 位置
+    CGRect rect = CGRectMake(0, cell.height * 0.5, cell.width, 1);
+    [menu setTargetRect:rect inView:cell];
+    
+    // 显示出来
+    [menu setMenuVisible:YES animated:YES];
+}
+#pragma mark - 获得选中cell的数据模型
+- (XKComment *)selectedComment
+{
+    // 获得选中行
+    NSIndexPath *path = self.tableView.indexPathForSelectedRow;
+    NSInteger row = path.row;
+    
+    NSArray *comments = self.comments;
+    if (path.section == 0 && self.hotComments.count) {
+        comments = self.hotComments;
+    }
+    return comments[row];
+}
+
+#pragma mark - UIMenuController处理
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    if (!self.isFirstResponder) {
+        if (action == @selector(ding:)
+            || action == @selector(reply:)
+            || action == @selector(warn:)) return NO;
+    }
+    return [super canPerformAction:action withSender:sender];
+}
+- (void)ding:(UIMenuController *)menu
+{
+    XKLog(@"%@",self.selectedComment.content);
+}
+- (void)reply:(UIMenuController *)menu
+{
+    // 获得选中的cell
+    NSIndexPath *path = self.tableView.indexPathForSelectedRow;
+    XKCommentCell *cell = (XKCommentCell *)[self.tableView cellForRowAtIndexPath:path];
+    XKLog(@"%@",cell.comment.content);
+}
+- (void)warn:(UIMenuController *)menu
+{
+    XKLog(@"%@",self.selectedComment.content);
+}
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 //{
 //    if (section == 0 && self.hotComments.count) {
@@ -226,14 +307,4 @@ static NSString * const XKCommentHeaderId = @"CommentHeader";
 //    return header;
 //}
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    XKCommentHeaderView *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:XKCommentHeaderId];
-    if (section == 0 && self.hotComments.count) {
-        header.text = @"最热评论";
-    }else{
-        header.text = @"最新评论";
-    }
-    return header;
-}
 @end

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "XKComment.h"
 typedef enum {
+    XKTopicTypeAll = 1, //全部
     XKTopicTypePicture = 10, // 图片
     XKTopicTypeWord = 29, // 段子(文字)
     XKTopicTypeVoice = 31, // 声音

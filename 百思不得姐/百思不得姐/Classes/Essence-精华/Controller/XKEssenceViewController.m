@@ -10,7 +10,6 @@
 #import "XKTagViewController.h"
 #import "XKTitleButton.h"
 #import "XKAllViewController.h"
-//#import "XMGAllViewController.h"
 #import "XKVideoViewController.h"
 #import "XKVoiceViewController.h"
 #import "XKPictureViewController.h"
@@ -27,6 +26,7 @@
 /** 存放所有的标签按钮 */
 @property (nonatomic, strong) NSMutableArray *titleButtons;
 
+@property (nonatomic, weak) UIView *titlesView;
 @end
 
 @implementation XKEssenceViewController
@@ -58,7 +58,6 @@
 - (void)setupChildVcs
 {
     XKAllViewController *allVc = [[XKAllViewController alloc] init];
-//    XMGAllViewController *allVc = [[XMGAllViewController alloc] init];
     allVc.title = @"全部";
     [self addChildViewController:allVc];
     
@@ -77,6 +76,24 @@
     XKWordViewController *wordVc = [[XKWordViewController alloc] init];
     wordVc.title = @"段子";
     [self addChildViewController:wordVc];
+    // 顶部工具条 跟随
+    for (XKTopicViewController *topicVc in self.childViewControllers) {
+        topicVc.blockTitlesViewY = ^(CGFloat titlesViewY){
+            [self setupTitlesViewY:titlesViewY];
+        };
+    }
+}
+/**
+ *  顶部工具条 跟随
+ */
+- (void)setupTitlesViewY:(CGFloat)titlesViewY
+{
+    if (titlesViewY == XKNavBarMaxY - XKTitlesViewH + 3) {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.titlesView.y = titlesViewY;
+        }];
+    }
+    self.titlesView.y = titlesViewY;
 }
 /**
  *  设置顶部标签
@@ -85,10 +102,10 @@
 {
     // 标签栏
     UIView *titlesView = [[UIView alloc] init];
-    titlesView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    titlesView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     titlesView.frame = CGRectMake(0, XKNavBarMaxY, self.view.width, XKTitlesViewH);
     [self.view addSubview:titlesView];
-    
+    self.titlesView = titlesView;
     // 标签栏里的按钮
     NSUInteger count = self.childViewControllers.count;
     CGFloat titleButtonH = titlesView.height;
@@ -122,7 +139,6 @@
     btnBottomView.centerX = firstTitleButton.centerX;
     [self titleClick:firstTitleButton];
 }
-
 /**
  *  设置scrollView 存放所有子控制器的view
  */
@@ -144,6 +160,7 @@
     // 默认选中全部
     [self scrollViewDidEndScrollingAnimation:scrollView];
 }
+
 /**
  *  设置导航栏
  */
@@ -196,7 +213,7 @@
     // 取出对应的控制器
     int index = scrollView.contentOffset.x / scrollView.width;
     UIViewController *willShowVc = self.childViewControllers[index];
-    
+
     // 如果控制器的view已经被创建过，就直接返回
     if (willShowVc.isViewLoaded) return;
     

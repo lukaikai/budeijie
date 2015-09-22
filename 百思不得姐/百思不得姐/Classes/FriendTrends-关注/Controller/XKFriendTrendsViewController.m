@@ -8,6 +8,7 @@
 
 #import "XKFriendTrendsViewController.h"
 #import "XKLoginRegisterViewController.h"
+#import "XKRecommendFollowViewController.h"
 
 @interface XKFriendTrendsViewController ()
 
@@ -29,9 +30,8 @@
 
 - (void)friendsRecommendClick
 {
-    UITableViewController *TableViewC = [[UITableViewController alloc] init];
-    [self.navigationController pushViewController:TableViewC animated:YES];
-    
+    XKRecommendFollowViewController *TableViewRf = [[XKRecommendFollowViewController alloc] init];
+    [self.navigationController pushViewController:TableViewRf animated:YES];
 }
 /**
  *  立即登录

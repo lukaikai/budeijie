@@ -59,6 +59,20 @@
         
         weakSelf.progressView.hidden = YES;
         
+        // 如果不是大图片 不需要处理
+        if (!topic.isBigPicture) return;
+        // 开启图文上下层
+        UIGraphicsBeginImageContextWithOptions(topic.pictureFrame.size, YES, 0);
+        // 画图片
+        CGFloat width = topic.pictureFrame.size.width;
+        CGFloat height = width * image.size.height / image.size.width;
+        [image drawInRect:CGRectMake(0, 0, width, height)];
+        // 获得图片
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        // 关闭上下文
+        UIGraphicsEndImageContext();
+        
+        self.imageView.image = image;
     }];
     
     self.gifView.hidden = !topic.is_gif;
@@ -66,10 +80,10 @@
     self.seeBigPictureBtn.hidden = !topic.isBigPicture;
 
     if (topic.isBigPicture) {
-        self.imageView.contentMode = UIViewContentModeTop;
+//        self.imageView.contentMode = UIViewContentModeTop;
         self.imageView.clipsToBounds = YES;
     }else{
-        self.imageView.contentMode = UIViewContentModeScaleToFill;
+//        self.imageView.contentMode = UIViewContentModeScaleToFill;
         self.imageView.clipsToBounds = NO;
     }
 }

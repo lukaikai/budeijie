@@ -24,6 +24,7 @@
 
 - (void)awakeFromNib
 {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.autoresizesSubviews = NO;
 }
 - (void)setComment:(XKComment *)comment

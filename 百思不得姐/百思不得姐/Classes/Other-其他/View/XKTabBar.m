@@ -41,6 +41,8 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+    // 标记按钮是否已经添加过监听器
+    static BOOL added = NO;
     // 设置发布按钮位置
     self.publishButton.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
     // 按钮索引
@@ -50,8 +52,7 @@
     CGFloat tabBarButtonW = self.frame.size.width / 5;
     CGFloat tabBarButtonH = self.frame.size.height;
     // 设置4个TabBarButton的frame
-    for (UIView *tabBarButton in self.subviews) {
-        
+    for (UIControl *tabBarButton in self.subviews) {
         if (![NSStringFromClass(tabBarButton.class) isEqualToString:@"UITabBarButton"]) continue;
         // 计算X
         CGFloat tabBarButtonX = index * tabBarButtonW;
@@ -63,7 +64,18 @@
         tabBarButton.frame = CGRectMake(tabBarButtonX, tabBarButtonY, tabBarButtonW, tabBarButtonH);
         // 增加索引
         index++;
+        
+        if (added == NO) {
+            // 监听按钮点击
+            [tabBarButton addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+        }
     }
+    added = YES;
 }
 
+- (void)btnClick
+{
+    // 发出通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:XKTabBarDidSelectNotification object:nil];
+}
 @end

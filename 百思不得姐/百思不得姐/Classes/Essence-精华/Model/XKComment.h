@@ -21,5 +21,6 @@
 @property(nonatomic, copy) NSString *voiceuri;
 /** 语音文件的时长 */
 @property(nonatomic, copy) NSString *voicetime;
-
+/** id */
+@property(nonatomic, copy) NSString *ID;
 @end

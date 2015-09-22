@@ -39,6 +39,9 @@ CGFloat const XKTopicTopCmtTopH = 18;
 NSString * const XKUserSexMale = @"m";
 /** 性别女 */
 NSString * const XKUserSexFemale = @"f";
+
+/** tabBar被选中的通知名字 */
+NSString * const XKTabBarDidSelectNotification = @"XKTabBarDidSelectNotification";
 /**
  全局常量的写法
  1.仅限于本文件访问

@@ -6,15 +6,15 @@
 //  Copyright (c) 2015年 xiaokai. All rights reserved.
 //
 
-#import "XKAllViewController.h"
+#import "XKTopicViewController.h"
 #import <AFNetworking.h>
 #import <MJRefresh.h>
 #import <MJExtension.h>
 #import "XKTopic.h"
 #import "XKTopicCell.h"
 #import "XKCommentViewController.h"
-
-@interface XKAllViewController ()
+#import "XKNewViewController.h"
+@interface XKTopicViewController ()<UITableViewDelegate>
 
 /** 网络请求管理者 */
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
@@ -22,11 +22,19 @@
 @property (nonatomic, strong) NSMutableArray *topics;
 /** 加载下一页需要的参数 */
 @property (nonatomic, copy) NSString *maxtime;
+/** 保存拖动时contentOffset的y */
+@property (nonatomic, assign) CGFloat scrollStartOffsetY;
 
+/** 上次选中的索引(或者控制器) */
+@property (nonatomic, assign) NSInteger lastSelectedIndex;
 @end
 
-@implementation XKAllViewController
-
+@implementation XKTopicViewController
+// 消除警告
+- (XKTopicType)topicType
+{
+    return 0;
+}
 static NSString * const XKTopicCellID = @"topic";
 
 #pragma mark - lazy
@@ -39,10 +47,27 @@ static NSString * const XKTopicCellID = @"topic";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    // 初始化高scrollStartOffsetY
+    self.scrollStartOffsetY = - (XKNavBarMaxY + XKTitlesViewH);
     [self setupTable];
     // 网络请求
     [self setupRefresh];
+    // 监听tabbar点击的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarSelect) name:XKTabBarDidSelectNotification object:nil];
+}
+- (void)tabBarSelect
+{
+    // 如果是连续选中 直接刷新
+    if (self.lastSelectedIndex == self.tabBarController.selectedIndex && self.view.isShowingOnKeyWindow) {
+        [self.tableView.header beginRefreshing];
+    }
+    // 记录这次的索引
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
+}
+- (void)dealloc
+{
+    // 移除监听
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:XKTabBarDidSelectNotification object:nil];
 }
 - (void)setupTable
 {
@@ -72,6 +97,16 @@ static NSString * const XKTopicCellID = @"topic";
     self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
 }
 /**
+ *  新帖控制器newlist参数 精华list参数
+ */
+- (NSString *)aParam
+{
+    if ([self.parentViewController isKindOfClass:[XKNewViewController class]]) {
+        return @"newlist";
+    }
+    return @"list";
+}
+/**
  *  加载最新的
  */
 - (void)loadNewTopics
@@ -80,9 +115,9 @@ static NSString * const XKTopicCellID = @"topic";
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     // 请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.aParam;
     params[@"c"] = @"data";
-    params[@"type"] = @1;
+    params[@"type"] = @(self.topicType);
     XKWeakSelf
     [self.manager GET:XKRequestURL parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         // 记录下次请求的参数
@@ -106,10 +141,10 @@ static NSString * const XKTopicCellID = @"topic";
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     // 请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.aParam;
     params[@"c"] = @"data";
     params[@"maxtime"] = self.maxtime;
-    params[@"type"] = @1;
+    params[@"type"] = @(self.topicType);
     XKWeakSelf
     [self.manager GET:XKRequestURL parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         // 记录下次请求的参数
@@ -153,5 +188,25 @@ static NSString * const XKTopicCellID = @"topic";
     XKCommentViewController *commentVc = [[XKCommentViewController alloc] init];
     commentVc.topic = self.topics[indexPath.row];
     [self.navigationController pushViewController:commentVc animated:YES];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat offsetY = self.scrollStartOffsetY - scrollView.contentOffset.y;
+
+    if (offsetY >= XKNavBarMaxY) {
+        offsetY = XKNavBarMaxY;
+    }else if (offsetY == 0){
+        offsetY = XKNavBarMaxY;
+        }else if (offsetY < XKNavBarMaxY - XKTitlesViewH + 3){
+            offsetY = XKNavBarMaxY - XKTitlesViewH + 3;
+        }
+    !self.blockTitlesViewY ? : self.blockTitlesViewY(offsetY);
+    
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    self.scrollStartOffsetY = scrollView.contentOffset.y;
 }
 @end

@@ -34,7 +34,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 /**
  *  关闭
@@ -46,13 +45,26 @@
 
 // iOS7之前修改状态栏样式
 // [UIApplication sharedApplication].statusBarStyle;
-// iOS7开始由控制器来修改状态栏样式
+// iOS7开始由控制器来修改状态栏样式 想用UIApplication 修改plist
 /**
  * 让状态栏样式为白色
  */
-- (UIStatusBarStyle)preferredStatusBarStyle
+//- (UIStatusBarStyle)preferredStatusBarStyle
+//{
+//    return UIStatusBarStyleLightContent;
+//}
+
+- (void)viewWillAppear:(BOOL)animated
 {
-    return UIStatusBarStyleLightContent;
+    [super viewWillAppear:animated];
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
 }
 /**
  *  退出键盘

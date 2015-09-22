@@ -25,14 +25,14 @@
     [self setupChildsVc];
     // 设置item属性
     [self setupItem];
-    // 设置自定义tabbar
+    // 设置自定义tabbar 只读 用KVC赋值
     [self setValue:[[XKTabBar alloc] init] forKeyPath:@"tabBar"];
     
     // 背景颜色
     self.view.backgroundColor = XKCommonBgColor;
 }
 /**
- *  添加自控制器
+ *  添加子控制器
  */
 - (void)setupChildsVc
 {
@@ -74,9 +74,8 @@
     // 选中状态文字属性
     NSMutableDictionary *selectedAttributes = [NSMutableDictionary dictionary];
     selectedAttributes[NSForegroundColorAttributeName] = [UIColor grayColor];
-    UITabBarItem *item = [UITabBarItem appearance];
-    
     // 统一给所有的UITabBarItem设置文字属性
+    UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:normalAttributes forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectedAttributes forState:UIControlStateSelected];
 }
