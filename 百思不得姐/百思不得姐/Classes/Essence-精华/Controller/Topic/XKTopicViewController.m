@@ -14,7 +14,7 @@
 #import "XKTopicCell.h"
 #import "XKCommentViewController.h"
 #import "XKNewViewController.h"
-@interface XKTopicViewController ()<UITableViewDelegate>
+@interface XKTopicViewController ()
 
 /** 网络请求管理者 */
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
@@ -57,7 +57,7 @@ static NSString * const XKTopicCellID = @"topic";
 }
 - (void)tabBarSelect
 {
-    // 如果是连续选中 直接刷新
+    // 如果是连续选中 并且是在当前控制器(view显示在眼前) 直接刷新
     if (self.lastSelectedIndex == self.tabBarController.selectedIndex && self.view.isShowingOnKeyWindow) {
         [self.tableView.header beginRefreshing];
     }
@@ -202,7 +202,6 @@ static NSString * const XKTopicCellID = @"topic";
             offsetY = XKNavBarMaxY - XKTitlesViewH + 3;
         }
     !self.blockTitlesViewY ? : self.blockTitlesViewY(offsetY);
-    
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView

@@ -102,7 +102,7 @@
 {
     // 标签栏
     UIView *titlesView = [[UIView alloc] init];
-    titlesView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
+    titlesView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
     titlesView.frame = CGRectMake(0, XKNavBarMaxY, self.view.width, XKTitlesViewH);
     [self.view addSubview:titlesView];
     self.titlesView = titlesView;

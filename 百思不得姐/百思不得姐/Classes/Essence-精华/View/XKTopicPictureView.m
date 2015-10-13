@@ -79,13 +79,13 @@
     
     self.seeBigPictureBtn.hidden = !topic.isBigPicture;
 
-    if (topic.isBigPicture) {
-//        self.imageView.contentMode = UIViewContentModeTop;
-        self.imageView.clipsToBounds = YES;
-    }else{
-//        self.imageView.contentMode = UIViewContentModeScaleToFill;
-        self.imageView.clipsToBounds = NO;
-    }
+//    if (topic.isBigPicture) {
+////        self.imageView.contentMode = UIViewContentModeTop;
+//        self.imageView.clipsToBounds = YES;
+//    }else{
+////        self.imageView.contentMode = UIViewContentModeScaleToFill;
+//        self.imageView.clipsToBounds = NO;
+//    }
 }
 
 @end

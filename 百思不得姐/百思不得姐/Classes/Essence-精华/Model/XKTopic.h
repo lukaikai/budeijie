@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "XKComment.h"
+#import <AVFoundation/AVFoundation.h>
 typedef enum {
     XKTopicTypeAll = 1, //全部
     XKTopicTypePicture = 10, // 图片
@@ -17,7 +18,8 @@ typedef enum {
 } XKTopicType;
 
 @interface XKTopic : NSObject
-
+@property (strong, nonatomic) AVPlayer *player;
+//@property (strong, nonatomic) AVPlayerLayer *layer;
 /** 昵称 */
 @property(nonatomic, copy) NSString *name;
 /** 头像 */
@@ -50,6 +52,8 @@ typedef enum {
 @property(nonatomic, assign) BOOL is_gif;
 /** 视频时长 */
 @property(nonatomic, assign) NSInteger videotime;
+/** 视频Url */
+@property(nonatomic, copy) NSString *videouri;
 /** 播放次数 */
 @property(nonatomic, assign) NSInteger playcount;
 /** id */

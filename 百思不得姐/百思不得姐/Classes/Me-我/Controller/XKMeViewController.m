@@ -10,6 +10,8 @@
 #import "XKSettingViewController.h"
 #import "XKMeCell.h"
 #import "XKMeFooterView.h"
+#import "XKViewForFooterSection.h"
+
 @interface XKMeViewController ()
 
 @end
@@ -87,4 +89,12 @@ static NSString * const XKMeCellID = @"meCell";
     
     return cell;
 }
+
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+//{
+//    if (section == 0) {
+//        return [[XKViewForFooterSection alloc] init];
+//    }
+//    return nil;
+//}
 @end

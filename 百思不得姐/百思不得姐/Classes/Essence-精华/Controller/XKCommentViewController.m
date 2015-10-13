@@ -28,8 +28,7 @@
 @property (strong, nonatomic) AFHTTPSessionManager *manager;
 /** 暂存最热评论 */
 @property (strong, nonatomic) XKComment *topComment;
-/** 上一页“评论”中的最后一个评论的id */
-@property (copy, nonatomic) NSString *lastcid;
+
 @end
 
 @implementation XKCommentViewController
@@ -197,7 +196,7 @@ static NSString * const XKCommentHeaderId = @"CommentHeader";
         comments = self.hotComments;
     }
     
-    cell.comment = self.comments[indexPath.row];
+    cell.comment = comments[indexPath.row];
     return cell;
 }
 

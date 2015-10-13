@@ -8,15 +8,28 @@
 
 #import "AppDelegate.h"
 #import "XKTabBarController.h"
+#import "XKShowGuideView.h"
+#import "XKAdViewController.h"
 @interface AppDelegate ()
 
 @property (strong, nonatomic) UIWindow *topWindow;
+
+@property (strong, nonatomic) UIWindow *adWindow;
 
 @end
 
 @implementation AppDelegate
 
 #pragma mark - lazy
+- (UIWindow *)adWindow
+{
+    if (!_adWindow) {
+        _adWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _adWindow.windowLevel = UIWindowLevelAlert;
+        _adWindow.rootViewController = [[XKAdViewController alloc] init];
+    }
+    return _adWindow;
+}
 - (UIWindow *)topWindow
 {
     if (!_topWindow) {
@@ -48,12 +61,12 @@
         // 判断是否是scrollView
         if (![scrollView isKindOfClass:[UIScrollView class]]) continue;
         
-        // 计算出scrollView在window坐标系上的矩形框
-        CGRect scrollViewRect = [scrollView convertRect:scrollView.bounds toView:scrollView.window];
-        CGRect windowRect = scrollView.window.bounds;
-        // 判断scrollView的边框是否和window的边框交叉
-        if (!CGRectIntersectsRect(scrollViewRect, windowRect)) continue;
-        
+//        // 计算出scrollView在window坐标系上的矩形框
+//        CGRect scrollViewRect = [scrollView convertRect:scrollView.bounds toView:scrollView.window];
+//        CGRect windowRect = scrollView.window.bounds;
+//        // 判断scrollView的边框是否和window的边框交叉
+//        if (!CGRectIntersectsRect(scrollViewRect, windowRect)) continue;
+        if (!scrollView.isShowingOnKeyWindow) continue;
         // 让scrollView滚到最前面
         CGPoint offset = scrollView.contentOffset;
         // 偏移量不一定是0
@@ -64,16 +77,26 @@
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOption
 {
+//    [self setupAdWindow];
     // 创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     // 设置窗口根控制器
     self.window.rootViewController = [[XKTabBarController alloc] init];
     // 显示窗口
     [self.window makeKeyAndVisible];
+    // 新特性页
+//    [XKShowGuideView show];
     
     return YES;
 }
 
+- (void)setupAdWindow
+{
+    self.adWindow.hidden = NO;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.adWindow.hidden = YES;
+    });
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

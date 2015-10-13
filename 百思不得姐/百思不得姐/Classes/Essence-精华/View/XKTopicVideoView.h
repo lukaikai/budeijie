@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 @class XKTopic;
-
+#import <AVFoundation/AVFoundation.h>
 @interface XKTopicVideoView : UIView
 
 /** 帖子模型 */
 @property(nonatomic,strong) XKTopic *topic;
 
+@property (strong, nonatomic) AVPlayer *player;
 @end

@@ -104,4 +104,15 @@
     
     return _topicCellH;
 }
+
+- (AVPlayer *)player
+{
+    AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithURL:[NSURL URLWithString:self.videouri]];
+    _player = [[AVPlayer alloc] initWithPlayerItem:playerItem];
+    return _player;
+}
+//- (AVPlayerLayer *)layer
+//{
+//    return [AVPlayerLayer playerLayerWithPlayer:self.player];
+//}
 @end

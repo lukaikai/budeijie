@@ -25,6 +25,9 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="highlighted" backgroundImage="playButtonClick"/>
+                    <connections>
+                        <action selector="playVideoBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Rwz-eB-x04"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="122播放" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ym-tI-AbC">
                     <rect key="frame" x="351" y="0.0" width="52" height="17"/>
@@ -62,6 +65,7 @@
             <connections>
                 <outlet property="imageView" destination="8JO-oJ-mce" id="IOe-yh-yEF"/>
                 <outlet property="playCountLabel" destination="2ym-tI-AbC" id="Xnx-qE-iRL"/>
+                <outlet property="playerBtn" destination="kga-3Z-MFk" id="SBI-r0-xpr"/>
                 <outlet property="videoTimeLabel" destination="ZMc-0b-S8Y" id="zcz-H4-JuL"/>
             </connections>
             <point key="canvasLocation" x="253.5" y="263"/>
